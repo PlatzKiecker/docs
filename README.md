@@ -4,7 +4,6 @@ PlatzKiecker is a project that aims to implement a table management system for r
 
 ## Table of Contents
 
-- [Introduction](#introduction)
 - [Project Structure](#project-structure)
 - [Installation and Usage](#installation-and-usage)
 - [Modules](#modules)
@@ -22,10 +21,6 @@ PlatzKiecker is a project that aims to implement a table management system for r
     - [Function/Class Name](#functionclass-name)
 - [Contributing](#contributing)
 - [License](#license)
-
-## Introduction
-
-Provide an overview of the project, its purpose, and any relevant background information.
 
 ## Project Structure
 
@@ -197,7 +192,7 @@ Description of what the function/class does.
 
 ## Contributing
 
-Provide guidelines for contributing to the project, including how to report issues, submit pull requests, and contribute code.
+If you plan on contributing to this project, feel free to contact us.
 
 ## License
 
