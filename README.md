@@ -1,15 +1,23 @@
-# [Project Name]
+# PlatzKiecker
 
-Brief description of the project.
+PlatzKiecker is a project that aims to implement a table management system for restaurants.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Scripts/Modules](#scriptsmodules)
+- [Installation](#installation-and-usage)
+- [Modules](#modules)
+  - [User Module](#user-module)
+    - [User Data Model](#user-data-model)
+  - [Restaurant Module](#restaurant-module)
+    - [Restaurant Data Model](#restaurant-data-model)
+    - [Zone Data Model](#zone-data-model)
+    - [Table Data Model](#table-data-model)
+    - [Vacation Data Model](#vacation-data-model)
+    - [BookingPeriod Data Model](#bookingperiod-data-model)
+  - [Booking Module](#booking-module)
+    - [Booking Data Model](#booking-data-model)
   - [Script/Module Name](#scriptmodule-name)
     - [Function/Class Name](#functionclass-name)
 - [Contributing](#contributing)
@@ -21,19 +29,11 @@ Provide an overview of the project, its purpose, and any relevant background inf
 
 ## Project Structure
 
-Describe the structure of the project, including directories, main files, and their purposes.
+Each component has its own directory in the root directory. By that we ensure Modularity and independance between used components.
 
-## Installation
+## Installation and Usage
 
-Provide instructions on how to install the project, including any dependencies.
-
-## Usage
-
-Explain how to use the project, including code examples and any necessary command-line interface (CLI) commands.
-
-## Configuration
-
-Explain how the configuration works, including any configuration files and how users can customize settings.
+For Setting up the project, please refer to the [project directory](#https://github.com/PlatzKiecker/platzkiecker?tab=readme-ov-file#installation)
 
 ## Modules
 
