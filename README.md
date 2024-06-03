@@ -174,7 +174,7 @@ Represents a booking made by a guest at a restaurant.
     - `guest_phone`: Phone number of the guest.
     - `start`: Start date and time of the booking.
     - `guest_count`: Number of guests.
-    - `status`: Status of the booking (e.g., pending, confirmed, cancelled).
+    - `status`: Status of the booking (e.g., pending, confirmed, seated, cancelled, completed).
     - `notes`: Additional notes for the booking.
     - `table`: Foreign key relationship to `Table`.
     - `restaurant`: Foreign key relationship to `Restaurant`.
