@@ -6,7 +6,7 @@ PlatzKiecker is a project that aims to implement a table management system for r
 
 - [Introduction](#introduction)
 - [Project Structure](#project-structure)
-- [Installation](#installation-and-usage)
+- [Installation and Usage](#installation-and-usage)
 - [Modules](#modules)
   - [User Module](#user-module)
     - [User Data Model](#user-data-model)
@@ -33,7 +33,7 @@ Each component has its own directory in the root directory. By that we ensure Mo
 
 ## Installation and Usage
 
-For Setting up the project, please refer to the [project directory](#https://github.com/PlatzKiecker/platzkiecker?tab=readme-ov-file#installation)
+For Setting up the project, please refer to the [project directory](https://github.com/PlatzKiecker/platzkiecker?tab=readme-ov-file#installation)
 
 ## Modules
 
