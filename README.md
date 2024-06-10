@@ -19,6 +19,9 @@ PlatzKiecker is a project that aims to implement a table management system for r
     - [Booking Data Model](#booking-data-model)
   - [Script/Module Name](#scriptmodule-name)
     - [Function/Class Name](#functionclass-name)
+- [Classes](#classes)
+  - [UserRegistrationSerializer](#userregistrationserializer)
+  - [UserLoginSerializer](#userloginserializer)
 - [Endpoints](#endpoints)
   - [User Endpoints](#unser-endpoints)
     - [Login](#login)
@@ -195,6 +198,96 @@ Description of what the function/class does.
 
 - Parameters/Attributes: Description of the parameters/attributes.
 - Returns: Description of the return value (if applicable).
+
+## Classes
+
+### UserRegistrationSerializer
+
+A serializer for handling user registration, including validation and creation of new user instances.
+
+**Attributes:**
+> - `Meta` (class): Inner class defining the model and fields to be serialized.
+>   - `model` (Model): The user model to be serialized.
+>   - `fields` (tuple): The fields to include in the serialization (`'id'`, `'email'`, `'password'`).
+>   - `extra_kwargs` (dict): Additional keyword arguments for fields. The password field is write-only and requires a minimum length of 5 characters.
+
+#### create function
+
+Creates a new user instance with the validated data.
+
+**Args:**
+> - `validated_data` (dict): The validated data from the serializer.
+
+**Returns:**
+> `User`: The created user instance.
+
+**Note:**
+> This function uses the `create_user` method of the user model to ensure the password is hashed.
+
+**Example:**
+```python
+from mymodule import UserRegistrationSerializer
+
+serializer = UserRegistrationSerializer(data={'email': 'user@example.com', 'password': 'password123'})
+if serializer.is_valid():
+    user = serializer.save()
+```
+
+#### update function
+
+Updates an existing user instance with the validated data.
+
+**Args:**
+> - `instance` (User): The user instance to update.
+> - `validated_data` (dict): The validated data from the serializer.
+
+**Returns:**
+> `User`: The updated user instance.
+
+**Note:**
+> If a new password is provided, it will be hashed and saved. Other fields will be updated as specified in the validated data.
+
+**Example:**
+```python
+from mymodule import UserRegistrationSerializer
+
+user = get_user_model().objects.get(id=1)
+serializer = UserRegistrationSerializer(user, data={'email': 'newemail@example.com', 'password': 'newpassword123'}, partial=True)
+if serializer.is_valid():
+    user = serializer.save()
+```
+
+---
+
+### UserLoginSerializer
+
+A serializer for handling user login, including validation of credentials.
+
+**Attributes:**
+> - `email` (EmailField): The email field for the user login.
+> - `password` (CharField): The password field for the user login. Styled as a password input and does not trim whitespace.
+
+#### validate function
+
+Validates the user credentials.
+
+**Args:**
+> - `attrs` (dict): The attributes to validate, typically containing `email` and `password`.
+
+**Returns:**
+> `dict`: The validated attributes, including the authenticated user.
+
+**Note:**
+> This function uses the `authenticate` method to verify the user's credentials. If authentication fails, it raises a `ValidationError`.
+
+**Example:**
+```python
+from mymodule import UserLoginSerializer
+
+serializer = UserLoginSerializer(data={'email': 'user@example.com', 'password': 'password123'})
+if serializer.is_valid():
+    user = serializer.validated_data['user']
+```
 
 ## Endpoints
 
