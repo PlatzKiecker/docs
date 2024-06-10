@@ -19,6 +19,12 @@ PlatzKiecker is a project that aims to implement a table management system for r
     - [Booking Data Model](#booking-data-model)
   - [Script/Module Name](#scriptmodule-name)
     - [Function/Class Name](#functionclass-name)
+- [Endpoints](#endpoints)
+  - [User Endpoints](#unser-endpoints)
+    - [Login](#login)
+  - [Restaurant Endpoints](#restaurant-endpoints)
+    - []
+  - [Booking endpoints](#booking-endpoints)
 - [Contributing](#contributing)
 - [License](#license)
 
