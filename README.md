@@ -196,6 +196,18 @@ Description of what the function/class does.
 - Parameters/Attributes: Description of the parameters/attributes.
 - Returns: Description of the return value (if applicable).
 
+## Endpoints
+
+PLaceholder Text
+
+### User Endpoints
+
+Placeholder Text
+
+#### Login
+
+Insert here
+
 ## Contributing
 
 If you plan on contributing to this project, feel free to contact us.
