@@ -1221,241 +1221,30 @@ HTTP/1.1 204 No Content
 - The PUT request allows for updating any of the fields defined in the `BookingPeriodSerializer`.
 - The DELETE request will remove the specified booking period from the system.
 
+Certainly! Here’s the updated API documentation with the necessary details from the `BookingSerializer` and `BookingListSerializer` classes included:
+
 ---
 
 ## Booking Endpoints
 
-Placeholder text
-
-### Create new booking
-
-BookingCreateView
+### Create New Booking
 
 This endpoint allows for creating a new booking.
 
-HTTP Method: POST
-
-Path: /api/bookings
-
-Request Parameters:
-
-None
-Request Body:
-
-field1 (type, required): Description of the field.
-field2 (type, optional): Description of the field.
-Other fields as defined in the BookingSerializer.
-Response:
-
-Status Code: 201 Created
-Content Type: application/json
-Example Request:
-
-http
-Code kopieren
-POST /api/bookings
-Host: example.com
-Content-Type: application/json
-
-{
-  "field1": "value1",
-  "field2": "value2"
-}
-Example Response:
-
-http
-Code kopieren
-HTTP/1.1 201 Created
-Content-Type: application/json
-
-{
-  "id": 1,
-  "field1": "value1",
-  "field2": "value2",
-  "created_at": "2023-06-05T12:34:56Z"
-}
-Note:
-
-Ensure that the request body includes all required fields as defined in the BookingSerializer.
-The endpoint will return a 400 Bad Request status code if any required fields are missing or invalid.
-
-### List all Bookings
-
-
-BookingListView
-
-
-This endpoint allows for listing all bookings for the current user's restaurant.
-
-**HTTP Method:** GET
-
-**Path:** /api/bookings
-
-**Request Parameters:**
-
-- None
-
-**Request Body:**
-
-- None
-
-**Response:**
-
-- **Status Code:** 200 OK
-- **Content Type:** application/json
-
-**Example Request:**
-
-```http
-GET /api/bookings
-Host: example.com
-Content-Type: application/json
-```
-
-**Example Response:**
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-[
-  {
-    "id": 1,
-    "field1": "value1",
-    "field2": "value2",
-    "created_at": "2023-06-05T12:34:56Z"
-  },
-  {
-    "id": 2,
-    "field1": "value3",
-    "field2": "value4",
-    "created_at": "2023-06-06T12:34:56Z"
-  }
-]
-```
-
-**Note:**
-
-- This endpoint returns all bookings associated with the current user's restaurant.
-- The response will include all fields as defined in the `BookingSerializer`.
-- Ensure that the user is authenticated, as the bookings are filtered based on the authenticated user's restaurant.
-
-### Modify bookings
-
-BookingDetailView
-
-
-This endpoint allows for retrieving, updating, or deleting a specific booking for the current user's restaurant.
-
-**HTTP Method:** GET, PUT, DELETE
-
-**Path:** /api/bookings/{id}
-
-**Request Parameters:**
-
-- `id` (integer, required): The ID of the booking to retrieve, update, or delete.
-
-**Request Body:**
-
-- `field1` (type, optional): Description of the field.
-- `field2` (type, optional): Description of the field.
-- Other fields as defined in the `BookingSerializer`.
-
-**Response:**
-
-- **Status Code:** 
-  - 200 OK (for GET and PUT)
-  - 204 No Content (for DELETE)
-- **Content Type:** application/json
-
-**Example Request (GET):**
-
-```http
-GET /api/bookings/1
-Host: example.com
-Content-Type: application/json
-```
-
-**Example Response (GET):**
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "id": 1,
-  "field1": "value1",
-  "field2": "value2",
-  "created_at": "2023-06-05T12:34:56Z"
-}
-```
-
-**Example Request (PUT):**
-
-```http
-PUT /api/bookings/1
-Host: example.com
-Content-Type: application/json
-
-{
-  "field1": "new_value1",
-  "field2": "new_value2"
-}
-```
-
-**Example Response (PUT):**
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "id": 1,
-  "field1": "new_value1",
-  "field2": "new_value2",
-  "created_at": "2023-06-05T12:34:56Z"
-}
-```
-
-**Example Request (DELETE):**
-
-```http
-DELETE /api/bookings/1
-Host: example.com
-Content-Type: application/json
-```
-
-**Example Response (DELETE):**
-
-```http
-HTTP/1.1 204 No Content
-```
-
-**Note:**
-
-- This endpoint filters bookings based on the authenticated user's restaurant.
-- Ensure that the `id` provided in the path corresponds to a booking associated with the user's restaurant.
-- Authentication is required for this endpoint.
-- The PUT request allows for updating any of the fields defined in the `BookingSerializer`.
-- The DELETE request will remove the specified booking from the system.
-
-Sure, here's the documentation for each endpoint following your template:
-
----
-
-#### **Create Booking**
-
-Creates a new booking for a specified restaurant.
-
 **HTTP Method:** `POST`
 
-**Path:** `/booking/create/<int:restaurant_id>/`
+**Path:** `/api/bookings`
 
 **Request Parameters:**
-> - `restaurant_id` (int, required): The ID of the restaurant where the booking is being created.
+> - None
 
 **Request Body:**
-> - Booking details including `start`, `end`, `guest_count`, `table`, etc. (depends on `BookingSerializer`).
+> - `guest_name` (string, required): The name of the guest.
+> - `guest_phone` (string, required): The phone number of the guest.
+> - `start` (datetime, required): The start time of the booking.
+> - `guest_count` (integer, required): The number of guests for the booking.
+> - `notes` (string, optional): Any additional notes for the booking.
+> - `table` (integer, optional): The ID of the table for the booking. If not provided, the system will assign an appropriate table based on availability and capacity.
 
 **Response:**
 > - Status Code: 201 Created
@@ -1463,15 +1252,16 @@ Creates a new booking for a specified restaurant.
 
 **Example Request:**
 ```http
-POST /booking/create/1/
+POST /api/bookings
 Host: example.com
 Content-Type: application/json
 
 {
+  "guest_name": "John Doe",
+  "guest_phone": "123-456-7890",
   "start": "2024-06-12T18:00:00Z",
-  "end": "2024-06-12T20:00:00Z",
   "guest_count": 2,
-  "table": 1
+  "notes": "Window seat if possible."
 }
 ```
 
@@ -1482,28 +1272,37 @@ Content-Type: application/json
 
 {
   "id": 1,
+  "guest_name": "John Doe",
+  "guest_phone": "123-456-7890",
   "start": "2024-06-12T18:00:00Z",
-  "end": "2024-06-12T20:00:00Z",
+  "end": "2024-06-12T19:45:00Z",
   "guest_count": 2,
-  "table": 1,
-  "restaurant": 1
+  "status": "Confirmed",
+  "notes": "Window seat if possible.",
+  "restaurant": 1,
+  "table": 3
 }
 ```
 
 **Note:**
-> - This endpoint does not require authentication.
+> - Ensure that the request body includes all required fields as defined in the `BookingSerializer`.
+> - The endpoint will return a 400 Bad Request status code if any required fields are missing or invalid.
+> - The `end` time for the booking is automatically calculated based on the restaurant’s default booking duration.
 
 ---
 
-#### **List Bookings**
+### List All Bookings
 
-Lists all bookings for the authenticated user's restaurant.
+This endpoint allows for listing all bookings for the current user's restaurant.
 
 **HTTP Method:** `GET`
 
-**Path:** `/booking/list/`
+**Path:** `/api/bookings`
 
 **Request Parameters:**
+> - None
+
+**Request Body:**
 > - None
 
 **Response:**
@@ -1512,9 +1311,9 @@ Lists all bookings for the authenticated user's restaurant.
 
 **Example Request:**
 ```http
-GET /booking/list/
+GET /api/bookings
 Host: example.com
-Authorization: Token YOUR_AUTH_TOKEN
+Content-Type: application/json
 ```
 
 **Example Response:**
@@ -1525,41 +1324,66 @@ Content-Type: application/json
 [
   {
     "id": 1,
+    "guest_name": "John Doe",
+    "guest_phone": "123-456-7890",
     "start": "2024-06-12T18:00:00Z",
-    "end": "2024-06-12T20:00:00Z",
+    "end": "2024-06-12T19:45:00Z",
     "guest_count": 2,
-    "table": 1,
-    "restaurant": 1
+    "status": "Confirmed",
+    "notes": "Window seat if possible.",
+    "restaurant": 1,
+    "table": 3
   },
-  ...
+  {
+    "id": 2,
+    "guest_name": "Jane Smith",
+    "guest_phone": "987-654-3210",
+    "start": "2024-06-13T19:00:00Z",
+    "end": "2024-06-13T20:45:00Z",
+    "guest_count": 4,
+    "status": "Pending",
+    "notes": "",
+    "restaurant": 1,
+    "table": 5
+  }
 ]
 ```
 
 **Note:**
-> - This endpoint requires authentication.
+> - This endpoint returns all bookings associated with the current user's restaurant.
+> - The response will include all fields as defined in the `BookingListSerializer`.
+> - Ensure that the user is authenticated, as the bookings are filtered based on the authenticated user's restaurant.
 
 ---
 
-#### **Booking Detail**
+### Modify Booking
 
-Retrieve, update, or delete a booking by ID for the authenticated user's restaurant.
+This endpoint allows for retrieving, updating, or deleting a specific booking for the current user's restaurant.
 
 **HTTP Method:** `GET`, `PUT`, `DELETE`
 
-**Path:** `/booking/detail/<int:pk>/`
+**Path:** `/api/bookings/{id}`
 
 **Request Parameters:**
-> - `pk` (int, required): The ID of the booking to retrieve, update, or delete.
+> - `id` (integer, required): The ID of the booking to retrieve, update, or delete.
+
+**Request Body:**
+> - `guest_name` (string, optional): The name of the guest.
+> - `guest_phone` (string, optional): The phone number of the guest.
+> - `start` (datetime, optional): The start time of the booking.
+> - `guest_count` (integer, optional): The number of guests for the booking.
+> - `notes` (string, optional): Any additional notes for the booking.
+> - `table` (integer, optional): The ID of the table for the booking.
 
 **Response:**
-> - Status Code: 200 OK for GET, 204 No Content for DELETE, 200 OK for PUT
+> - Status Code: 200 OK (for GET and PUT), 204 No Content (for DELETE)
 > - Content Type: application/json
 
 **Example Request (GET):**
 ```http
-GET /booking/detail/1/
+GET /api/bookings/1
 Host: example.com
-Authorization: Token YOUR_AUTH_TOKEN
+Content-Type: application/json
 ```
 
 **Example Response (GET):**
@@ -1569,21 +1393,75 @@ Content-Type: application/json
 
 {
   "id": 1,
+  "guest_name": "John Doe",
+  "guest_phone": "123-456-7890",
   "start": "2024-06-12T18:00:00Z",
-  "end": "2024-06-12T20:00:00Z",
+  "end": "2024-06-12T19:45:00Z",
   "guest_count": 2,
-  "table": 1,
-  "restaurant": 1
+  "status": "Confirmed",
+  "notes": "Window seat if possible.",
+  "restaurant": 1,
+  "table": 3
 }
 ```
 
+**Example Request (PUT):**
+```http
+PUT /api/bookings/1
+Host: example.com
+Content-Type: application/json
+
+{
+  "guest_name": "John Doe",
+  "guest_phone": "123-456-7890",
+  "start": "2024-06-12T18:00:00Z",
+  "guest_count": 3,
+  "notes": "Change to three guests.",
+  "table": 4
+}
+```
+
+**Example Response (PUT):**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": 1,
+  "guest_name": "John Doe",
+  "guest_phone": "123-456-7890",
+  "start": "2024-06-12T18:00:00Z",
+  "end": "2024-06-12T19:45:00Z",
+  "guest_count": 3,
+  "status": "Confirmed",
+  "notes": "Change to three guests.",
+  "restaurant": 1,
+  "table": 4
+}
+```
+
+**Example Request (DELETE):**
+```http
+DELETE /api/bookings/1
+Host: example.com
+Content-Type: application/json
+```
+
+**Example Response (DELETE):**
+```http
+HTTP/1.1 204 No Content
+```
+
 **Note:**
-> - This endpoint requires authentication.
-> - Use `PUT` to update and `DELETE` to remove the booking.
+> - This endpoint filters bookings based on the authenticated user's restaurant.
+> - Ensure that the `id` provided in the path corresponds to a booking associated with the user's restaurant.
+> - Authentication is required for this endpoint.
+> - The `PUT` request allows for updating any of the fields defined in the `BookingSerializer`.
+> - The `DELETE` request will remove the specified booking from the system.
 
 ---
 
-#### **Available Days**
+### Available Days
 
 Gets a list of available days for booking for the authenticated user's restaurant.
 
@@ -1626,7 +1504,7 @@ Content-Type: application/json
 
 ---
 
-#### **Available Time Slots**
+### Available Time Slots
 
 Gets a list of available time slots for booking for a specific day and guest count.
 
@@ -1645,26 +1523,4 @@ Gets a list of available time slots for booking for a specific day and guest cou
 
 **Example Request:**
 ```http
-GET /available-time-slots/?restaurant_id=1&day=2024-06-12&guest_count=2
-Host: example.com
-Authorization: Token YOUR_AUTH_TOKEN
-```
-
-**Example Response:**
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "free_slots": [
-    {"start": "18:00", "end": "18:45"},
-    {"start": "19:00", "end": "19:45"},
-    ...
-  ]
-}
-```
-
-**Note:**
-> - This endpoint requires authentication.
-
----
+GET /available-time-slots/?restaurant_id=1&day=2024-06-12&guest_count
