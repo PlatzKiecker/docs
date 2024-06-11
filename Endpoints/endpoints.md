@@ -1534,13 +1534,12 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "available_time_slots": [
-    "18:00",
-    "18:15",
-    "18:30",
-    "18:45",
-    "19:00",
-    ...
+  "free_slots": [
+    [
+      {"start": "12:00", "end": "15:00"},
+      {"start": "12:15", "end": "15:15"},
+      ...
+    ]
   ]
 }
 ```
@@ -1549,5 +1548,8 @@ Content-Type: application/json
 > - This endpoint requires authentication.
 > - It checks the availability of time slots for a specific date and guest count.
 > - The available time slots are filtered based on the restaurant’s booking periods and current reservations.
+> - The `free_slots` array contains objects with `start` and `end` keys indicating the start and end times of available slots.
+> - The `free_slots` entries are available in 15-minute intervals.
+
 
 ---
