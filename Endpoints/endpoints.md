@@ -1523,4 +1523,31 @@ Gets a list of available time slots for booking for a specific day and guest cou
 
 **Example Request:**
 ```http
-GET /available-time-slots/?restaurant_id=1&day=2024-06-12&guest_count
+GET /available-time-slots/?restaurant_id=1&day=2024-06-12&guest_count=2
+Host: example.com
+Authorization: Token YOUR_AUTH_TOKEN
+```
+
+**Example Response:**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "available_time_slots": [
+    "18:00",
+    "18:15",
+    "18:30",
+    "18:45",
+    "19:00",
+    ...
+  ]
+}
+```
+
+**Note:**
+> - This endpoint requires authentication.
+> - It checks the availability of time slots for a specific date and guest count.
+> - The available time slots are filtered based on the restaurant’s booking periods and current reservations.
+
+---
