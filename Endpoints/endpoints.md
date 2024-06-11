@@ -1,4 +1,4 @@
-# Table of Contents
+# Endpoints
 - [Endpoints](#endpoints)
   - [User Endpoints](#unser-endpoints)
     - [Register](#register)
@@ -23,10 +23,6 @@
     - [Create new booking](#create-new-bookings)
     - [List all bookings](#list-all-bookings)
     - [Modify bookings](#modify-bookings)
-
-# Endpoints
-
-PLaceholder Text
 
 ## User Endpoints
 
