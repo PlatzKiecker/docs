@@ -32,7 +32,7 @@ Module for managing users who can administer restaurants.
     user = User(email="example@example.com", password="securepassword")
     user.save()
     ```
-    
+
 ### User Data Model
 
 Represents a user who manages a restaurant.
@@ -40,6 +40,15 @@ Represents a user who manages a restaurant.
 - **Fields**:
     - `email`: Email of the user (unique).
     - `password`: Password for user authentication.
+    - `created`: Timestamp of when the user was created.
+    - `is_admin`: Boolean indicating if the user is an admin.
+
+- **Methods**:
+    - `create_user(email, password, **kwargs)`: Creates a new user.
+    - `create_superuser(email, password)`: Creates a new superuser.
+    - `has_perm(perm, obj=None)`: Returns `True` if the user has the specified permission.
+    - `has_module_perms(app_label)`: Returns `True` if the user has permissions for the specified app label.
+    - `is_staff`: Returns `True` if the user is a staff member.
 
 ---
 
@@ -85,6 +94,9 @@ Represents a zone within a restaurant.
     - `name`: Name of the zone.
     - `bookable`: Boolean indicating if the zone can be booked.
     - `restaurant`: Foreign key relationship to `Restaurant`.
+
+- **Methods**:
+    - `save(*args, **kwargs)`: Custom save method to update tables' bookable status if the zone is not bookable.
 
 ### Table Data Model
 
@@ -155,3 +167,7 @@ Represents a booking made by a guest at a restaurant.
     - `notes`: Additional notes for the booking (optional).
     - `table`: Foreign key relationship to `Table`.
     - `restaurant`: Foreign key relationship to `Restaurant`.
+
+- **Methods**:
+    - `__str__()`: Returns a string representation of the booking.
+    - `calculate_booking_endtime()`: Calculates and returns the end time of the booking based on the restaurant's default duration.
