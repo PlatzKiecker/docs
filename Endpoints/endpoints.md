@@ -1,6 +1,8 @@
+Sure, here's the adapted table of contents including the new endpoints:
+
 # Endpoints
 - [Endpoints](#endpoints)
-  - [User Endpoints](#unser-endpoints)
+  - [User Endpoints](#user-endpoints)
     - [Register](#register)
     - [Login](#login)
     - [Logout](#logout)
@@ -9,20 +11,22 @@
     - [Modify specific restaurant](#modify-specific-restaurant)
     - [Create new zone](#create-new-zone)
     - [List all zones](#list-all-zones)
-    - [Modify specific zone ](#modify-specific-zone)
+    - [Modify specific zone](#modify-specific-zone)
     - [Create new table](#create-new-table)
-    - [List all tables ](#list-all-tables)
+    - [List all tables](#list-all-tables)
     - [Modify specific table](#modify-specific-table)
     - [Create new vacation period](#create-new-vacation-period)
     - [List all vacation periods](#list-all-vacation-periods)
     - [Modify specific vacation period](#modify-specific-vacation-period)
     - [Create new booking period](#create-new-booking-period)
-    - [List booking period](#list-booking-period)
+    - [List booking periods](#list-booking-periods)
     - [Modify specific booking period](#modify-specific-booking-period)
-  - [Booking endpoints](#booking-endpoints)
-    - [Create new booking](#create-new-bookings)
+  - [Booking Endpoints](#booking-endpoints)
+    - [Create new booking](#create-new-booking)
     - [List all bookings](#list-all-bookings)
-    - [Modify bookings](#modify-bookings)
+    - [Modify booking](#modify-booking)
+    - [Available days](#available-days)
+    - [Available time slots](#available-time-slots)
 
 ## User Endpoints
 
@@ -177,6 +181,8 @@ Content-Type: application/json
 
 - This endpoint requires that the user is authenticated before logging out.
 - The endpoint will clear the user's session and log them out of the system.
+
+---
 
 ## Restaurant Endpoints
 
@@ -1215,6 +1221,8 @@ HTTP/1.1 204 No Content
 - The PUT request allows for updating any of the fields defined in the `BookingPeriodSerializer`.
 - The DELETE request will remove the specified booking period from the system.
 
+---
+
 ## Booking Endpoints
 
 Placeholder text
@@ -1430,3 +1438,233 @@ HTTP/1.1 204 No Content
 - Authentication is required for this endpoint.
 - The PUT request allows for updating any of the fields defined in the `BookingSerializer`.
 - The DELETE request will remove the specified booking from the system.
+
+Sure, here's the documentation for each endpoint following your template:
+
+---
+
+#### **Create Booking**
+
+Creates a new booking for a specified restaurant.
+
+**HTTP Method:** `POST`
+
+**Path:** `/booking/create/<int:restaurant_id>/`
+
+**Request Parameters:**
+> - `restaurant_id` (int, required): The ID of the restaurant where the booking is being created.
+
+**Request Body:**
+> - Booking details including `start`, `end`, `guest_count`, `table`, etc. (depends on `BookingSerializer`).
+
+**Response:**
+> - Status Code: 201 Created
+> - Content Type: application/json
+
+**Example Request:**
+```http
+POST /booking/create/1/
+Host: example.com
+Content-Type: application/json
+
+{
+  "start": "2024-06-12T18:00:00Z",
+  "end": "2024-06-12T20:00:00Z",
+  "guest_count": 2,
+  "table": 1
+}
+```
+
+**Example Response:**
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "id": 1,
+  "start": "2024-06-12T18:00:00Z",
+  "end": "2024-06-12T20:00:00Z",
+  "guest_count": 2,
+  "table": 1,
+  "restaurant": 1
+}
+```
+
+**Note:**
+> - This endpoint does not require authentication.
+
+---
+
+#### **List Bookings**
+
+Lists all bookings for the authenticated user's restaurant.
+
+**HTTP Method:** `GET`
+
+**Path:** `/booking/list/`
+
+**Request Parameters:**
+> - None
+
+**Response:**
+> - Status Code: 200 OK
+> - Content Type: application/json
+
+**Example Request:**
+```http
+GET /booking/list/
+Host: example.com
+Authorization: Token YOUR_AUTH_TOKEN
+```
+
+**Example Response:**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "start": "2024-06-12T18:00:00Z",
+    "end": "2024-06-12T20:00:00Z",
+    "guest_count": 2,
+    "table": 1,
+    "restaurant": 1
+  },
+  ...
+]
+```
+
+**Note:**
+> - This endpoint requires authentication.
+
+---
+
+#### **Booking Detail**
+
+Retrieve, update, or delete a booking by ID for the authenticated user's restaurant.
+
+**HTTP Method:** `GET`, `PUT`, `DELETE`
+
+**Path:** `/booking/detail/<int:pk>/`
+
+**Request Parameters:**
+> - `pk` (int, required): The ID of the booking to retrieve, update, or delete.
+
+**Response:**
+> - Status Code: 200 OK for GET, 204 No Content for DELETE, 200 OK for PUT
+> - Content Type: application/json
+
+**Example Request (GET):**
+```http
+GET /booking/detail/1/
+Host: example.com
+Authorization: Token YOUR_AUTH_TOKEN
+```
+
+**Example Response (GET):**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": 1,
+  "start": "2024-06-12T18:00:00Z",
+  "end": "2024-06-12T20:00:00Z",
+  "guest_count": 2,
+  "table": 1,
+  "restaurant": 1
+}
+```
+
+**Note:**
+> - This endpoint requires authentication.
+> - Use `PUT` to update and `DELETE` to remove the booking.
+
+---
+
+#### **Available Days**
+
+Gets a list of available days for booking for the authenticated user's restaurant.
+
+**HTTP Method:** `GET`
+
+**Path:** `/available-days/`
+
+**Request Parameters:**
+> - `restaurant_id` (int, required): The ID of the restaurant.
+> - `start_day` (date, required): The start date for checking availability (format: YYYY-MM-DD).
+> - `guest_count` (int, required): The number of guests.
+
+**Response:**
+> - Status Code: 200 OK
+> - Content Type: application/json
+
+**Example Request:**
+```http
+GET /available-days/?restaurant_id=1&start_day=2024-06-12&guest_count=2
+Host: example.com
+Authorization: Token YOUR_AUTH_TOKEN
+```
+
+**Example Response:**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "available_days": [
+    "2024-06-12",
+    "2024-06-13",
+    ...
+  ]
+}
+```
+
+**Note:**
+> - This endpoint requires authentication.
+
+---
+
+#### **Available Time Slots**
+
+Gets a list of available time slots for booking for a specific day and guest count.
+
+**HTTP Method:** `GET`
+
+**Path:** `/available-time-slots/`
+
+**Request Parameters:**
+> - `restaurant_id` (int, required): The ID of the restaurant.
+> - `day` (date, required): The date for checking available time slots (format: YYYY-MM-DD).
+> - `guest_count` (int, required): The number of guests.
+
+**Response:**
+> - Status Code: 200 OK
+> - Content Type: application/json
+
+**Example Request:**
+```http
+GET /available-time-slots/?restaurant_id=1&day=2024-06-12&guest_count=2
+Host: example.com
+Authorization: Token YOUR_AUTH_TOKEN
+```
+
+**Example Response:**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "free_slots": [
+    {"start": "18:00", "end": "18:45"},
+    {"start": "19:00", "end": "19:45"},
+    ...
+  ]
+}
+```
+
+**Note:**
+> - This endpoint requires authentication.
+
+---
