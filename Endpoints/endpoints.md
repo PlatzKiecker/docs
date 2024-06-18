@@ -38,7 +38,7 @@ This endpoint allows for user registration by creating a new user in the system.
 
 **HTTP Method:** POST
 
-**Path:** /api/register
+**Path:** /register
 
 **Request Parameters:**
 
@@ -59,7 +59,7 @@ This endpoint allows for user registration by creating a new user in the system.
 **Example Request:**
 
 ```http
-POST /api/register
+POST /register
 Host: example.com
 Content-Type: application/json
 
@@ -95,7 +95,7 @@ This endpoint allows for user login by authenticating the user and returning a t
 
 **HTTP Method:** POST
 
-**Path:** /api/login
+**Path:** /login
 
 **Request Parameters:**
 
@@ -114,7 +114,7 @@ This endpoint allows for user login by authenticating the user and returning a t
 **Example Request:**
 
 ```http
-POST /api/login
+POST /login
 Host: example.com
 Content-Type: application/json
 
@@ -147,7 +147,7 @@ This endpoint allows for user logout by ending the user's session.
 
 **HTTP Method:** GET
 
-**Path:** /api/logout
+**Path:** /logout
 
 **Request Parameters:**
 
@@ -165,7 +165,7 @@ This endpoint allows for user logout by ending the user's session.
 **Example Request:**
 
 ```http
-GET /api/logout
+GET /logout
 Host: example.com
 Content-Type: application/json
 ```
@@ -196,7 +196,7 @@ This endpoint allows for creating a new restaurant.
 
 **HTTP Method:** POST
 
-**Path:** /api/restaurants
+**Path:** /restaurants
 
 **Request Parameters:**
 
@@ -217,7 +217,7 @@ This endpoint allows for creating a new restaurant.
 **Example Request:**
 
 ```http
-POST /api/restaurants
+POST /restaurants
 Host: example.com
 Content-Type: application/json
 
@@ -256,7 +256,7 @@ This endpoint allows for retrieving, updating, or deleting a specific restaurant
 
 **HTTP Method:** GET, PUT, DELETE
 
-**Path:** /api/restaurants/{id}
+**Path:** /restaurants/{id}
 
 **Request Parameters:**
 
@@ -279,7 +279,7 @@ This endpoint allows for retrieving, updating, or deleting a specific restaurant
 **Example Request (GET):**
 
 ```http
-GET /api/restaurants/1
+GET /restaurants/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -302,7 +302,7 @@ Content-Type: application/json
 **Example Request (PUT):**
 
 ```http
-PUT /api/restaurants/1
+PUT /restaurants/1
 Host: example.com
 Content-Type: application/json
 
@@ -331,7 +331,7 @@ Content-Type: application/json
 **Example Request (DELETE):**
 
 ```http
-DELETE /api/restaurants/1
+DELETE /restaurants/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -359,7 +359,7 @@ This endpoint allows for creating a new zone within a restaurant.
 
 **HTTP Method:** POST
 
-**Path:** /api/zones
+**Path:** /zones
 
 **Request Parameters:**
 
@@ -379,7 +379,7 @@ This endpoint allows for creating a new zone within a restaurant.
 **Example Request:**
 
 ```http
-POST /api/zones
+POST /zones
 Host: example.com
 Content-Type: application/json
 
@@ -416,7 +416,7 @@ This endpoint allows for listing all zones for the current user's restaurant.
 
 **HTTP Method:** GET
 
-**Path:** /api/zones
+**Path:** /zones
 
 **Request Parameters:**
 
@@ -434,7 +434,7 @@ This endpoint allows for listing all zones for the current user's restaurant.
 **Example Request:**
 
 ```http
-GET /api/zones
+GET /zones
 Host: example.com
 Content-Type: application/json
 ```
@@ -474,7 +474,7 @@ This endpoint allows for retrieving, updating, or deleting a specific zone for t
 
 **HTTP Method:** GET, PUT, DELETE
 
-**Path:** /api/zones/{id}
+**Path:** /zones/{id}
 
 **Request Parameters:**
 
@@ -496,7 +496,7 @@ This endpoint allows for retrieving, updating, or deleting a specific zone for t
 **Example Request (GET):**
 
 ```http
-GET /api/zones/1
+GET /zones/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -518,7 +518,7 @@ Content-Type: application/json
 **Example Request (PUT):**
 
 ```http
-PUT /api/zones/1
+PUT /zones/1
 Host: example.com
 Content-Type: application/json
 
@@ -545,7 +545,7 @@ Content-Type: application/json
 **Example Request (DELETE):**
 
 ```http
-DELETE /api/zones/1
+DELETE /zones/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -572,7 +572,7 @@ This endpoint allows for creating a new table within a zone.
 
 **HTTP Method:** POST
 
-**Path:** /api/tables
+**Path:** /tables
 
 **Request Parameters:**
 
@@ -592,7 +592,7 @@ This endpoint allows for creating a new table within a zone.
 **Example Request:**
 
 ```http
-POST /api/tables
+POST /tables
 Host: example.com
 Content-Type: application/json
 
@@ -629,7 +629,7 @@ This endpoint allows for listing all tables for the current user's restaurant zo
 
 **HTTP Method:** GET
 
-**Path:** /api/tables
+**Path:** /tables
 
 **Request Parameters:**
 
@@ -647,7 +647,7 @@ This endpoint allows for listing all tables for the current user's restaurant zo
 **Example Request:**
 
 ```http
-GET /api/tables
+GET /tables
 Host: example.com
 Content-Type: application/json
 ```
@@ -687,7 +687,7 @@ This endpoint allows for retrieving, updating, or deleting a specific table for 
 
 **HTTP Method:** GET, PUT, DELETE
 
-**Path:** /api/tables/{id}
+**Path:** /tables/{id}
 
 **Request Parameters:**
 
@@ -709,7 +709,7 @@ This endpoint allows for retrieving, updating, or deleting a specific table for 
 **Example Request (GET):**
 
 ```http
-GET /api/tables/1
+GET /tables/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -731,7 +731,7 @@ Content-Type: application/json
 **Example Request (PUT):**
 
 ```http
-PUT /api/tables/1
+PUT /tables/1
 Host: example.com
 Content-Type: application/json
 
@@ -758,7 +758,7 @@ Content-Type: application/json
 **Example Request (DELETE):**
 
 ```http
-DELETE /api/tables/1
+DELETE /tables/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -785,7 +785,7 @@ This endpoint allows for creating a new vacation period for a restaurant.
 
 **HTTP Method:** POST
 
-**Path:** /api/vacations
+**Path:** /vacations
 
 **Request Parameters:**
 
@@ -806,7 +806,7 @@ This endpoint allows for creating a new vacation period for a restaurant.
 **Example Request:**
 
 ```http
-POST /api/vacations
+POST /vacations
 Host: example.com
 Content-Type: application/json
 
@@ -845,7 +845,7 @@ This endpoint allows for listing all vacation periods for the current user's res
 
 **HTTP Method:** GET
 
-**Path:** /api/vacations
+**Path:** /vacations
 
 **Request Parameters:**
 
@@ -863,7 +863,7 @@ This endpoint allows for listing all vacation periods for the current user's res
 **Example Request:**
 
 ```http
-GET /api/vacations
+GET /vacations
 Host: example.com
 Content-Type: application/json
 ```
@@ -905,7 +905,7 @@ This endpoint allows for retrieving, updating, or deleting a specific vacation p
 
 **HTTP Method:** GET, PUT, DELETE
 
-**Path:** /api/vacations/{id}
+**Path:** /vacations/{id}
 
 **Request Parameters:**
 
@@ -928,7 +928,7 @@ This endpoint allows for retrieving, updating, or deleting a specific vacation p
 **Example Request (GET):**
 
 ```http
-GET /api/vacations/1
+GET /vacations/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -951,7 +951,7 @@ Content-Type: application/json
 **Example Request (PUT):**
 
 ```http
-PUT /api/vacations/1
+PUT /vacations/1
 Host: example.com
 Content-Type: application/json
 
@@ -980,7 +980,7 @@ Content-Type: application/json
 **Example Request (DELETE):**
 
 ```http
-DELETE /api/vacations/1
+DELETE /vacations/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -1007,7 +1007,7 @@ This endpoint allows for creating a new booking period for a restaurant.
 
 **HTTP Method:** POST
 
-**Path:** /api/booking-periods
+**Path:** /booking-periods
 
 **Request Parameters:**
 
@@ -1028,7 +1028,7 @@ This endpoint allows for creating a new booking period for a restaurant.
 **Example Request:**
 
 ```http
-POST /api/booking-periods
+POST /booking-periods
 Host: example.com
 Content-Type: application/json
 
@@ -1067,7 +1067,7 @@ This endpoint allows for listing all booking periods for the current user's rest
 
 **HTTP Method:** GET
 
-**Path:** /api/booking-periods
+**Path:** /booking-periods
 
 **Request Parameters:**
 
@@ -1085,7 +1085,7 @@ This endpoint allows for listing all booking periods for the current user's rest
 **Example Request:**
 
 ```http
-GET /api/booking-periods
+GET /booking-periods
 Host: example.com
 Content-Type: application/json
 ```
@@ -1127,7 +1127,7 @@ This endpoint allows for retrieving, updating, or deleting a specific booking pe
 
 **HTTP Method:** GET, PUT, DELETE
 
-**Path:** /api/booking-periods/{id}
+**Path:** /booking-periods/{id}
 
 **Request Parameters:**
 
@@ -1150,7 +1150,7 @@ This endpoint allows for retrieving, updating, or deleting a specific booking pe
 **Example Request (GET):**
 
 ```http
-GET /api/booking-periods/1
+GET /booking-periods/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -1173,7 +1173,7 @@ Content-Type: application/json
 **Example Request (PUT):**
 
 ```http
-PUT /api/booking-periods/1
+PUT /booking-periods/1
 Host: example.com
 Content-Type: application/json
 
@@ -1202,7 +1202,7 @@ Content-Type: application/json
 **Example Request (DELETE):**
 
 ```http
-DELETE /api/booking-periods/1
+DELETE /booking-periods/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -1233,7 +1233,7 @@ This endpoint allows for creating a new booking.
 
 **HTTP Method:** `POST`
 
-**Path:** `/api/bookings`
+**Path:** `/bookings`
 
 **Request Parameters:**
 > - None
@@ -1252,7 +1252,7 @@ This endpoint allows for creating a new booking.
 
 **Example Request:**
 ```http
-POST /api/bookings
+POST /bookings
 Host: example.com
 Content-Type: application/json
 
@@ -1297,7 +1297,7 @@ This endpoint allows for listing all bookings for the current user's restaurant.
 
 **HTTP Method:** `GET`
 
-**Path:** `/api/bookings`
+**Path:** `/bookings`
 
 **Request Parameters:**
 > - None
@@ -1311,7 +1311,7 @@ This endpoint allows for listing all bookings for the current user's restaurant.
 
 **Example Request:**
 ```http
-GET /api/bookings
+GET /bookings
 Host: example.com
 Content-Type: application/json
 ```
@@ -1362,7 +1362,7 @@ This endpoint allows for retrieving, updating, or deleting a specific booking fo
 
 **HTTP Method:** `GET`, `PUT`, `DELETE`
 
-**Path:** `/api/bookings/{id}`
+**Path:** `/bookings/{id}`
 
 **Request Parameters:**
 > - `id` (integer, required): The ID of the booking to retrieve, update, or delete.
@@ -1381,7 +1381,7 @@ This endpoint allows for retrieving, updating, or deleting a specific booking fo
 
 **Example Request (GET):**
 ```http
-GET /api/bookings/1
+GET /bookings/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -1407,7 +1407,7 @@ Content-Type: application/json
 
 **Example Request (PUT):**
 ```http
-PUT /api/bookings/1
+PUT /bookings/1
 Host: example.com
 Content-Type: application/json
 
@@ -1442,7 +1442,7 @@ Content-Type: application/json
 
 **Example Request (DELETE):**
 ```http
-DELETE /api/bookings/1
+DELETE /bookings/1
 Host: example.com
 Content-Type: application/json
 ```
