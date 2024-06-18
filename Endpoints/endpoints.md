@@ -193,7 +193,7 @@ This endpoint allows for creating a new restaurant.
 
 **HTTP Method:** POST
 
-**Path:** /restaurants
+**Path:** /restaurant
 
 **Request Parameters:**
 
@@ -202,9 +202,6 @@ This endpoint allows for creating a new restaurant.
 **Request Body:**
 
 - `name` (string, required): The name of the restaurant.
-- `address` (string, required): The address of the restaurant.
-- `phone` (string, optional): The contact phone number of the restaurant.
-- Other fields as defined in the `RestaurantSerializer`.
 
 **Response:**
 
@@ -214,14 +211,12 @@ This endpoint allows for creating a new restaurant.
 **Example Request:**
 
 ```http
-POST /restaurants
+POST /restaurant
 Host: example.com
 Content-Type: application/json
 
 {
-  "name": "New Restaurant",
-  "address": "123 Main St",
-  "phone": "555-1234"
+  "name": "New Restaurant"
 }
 ```
 
@@ -232,11 +227,7 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
-  "id": 1,
-  "name": "New Restaurant",
-  "address": "123 Main St",
-  "phone": "555-1234",
-  "created_at": "2023-06-05T12:34:56Z"
+  "name": "New Restaurant"
 }
 ```
 
@@ -253,7 +244,7 @@ This endpoint allows for retrieving, updating, or deleting a specific restaurant
 
 **HTTP Method:** GET, PUT, DELETE
 
-**Path:** /restaurants/{id}
+**Path:** /restaurant/{id}
 
 **Request Parameters:**
 
@@ -276,7 +267,7 @@ This endpoint allows for retrieving, updating, or deleting a specific restaurant
 **Example Request (GET):**
 
 ```http
-GET /restaurants/1
+GET /restaurant/1
 Host: example.com
 Content-Type: application/json
 ```
@@ -299,7 +290,7 @@ Content-Type: application/json
 **Example Request (PUT):**
 
 ```http
-PUT /restaurants/1
+PUT /restaurant/1
 Host: example.com
 Content-Type: application/json
 
@@ -328,7 +319,7 @@ Content-Type: application/json
 **Example Request (DELETE):**
 
 ```http
-DELETE /restaurants/1
+DELETE /restaurant/1
 Host: example.com
 Content-Type: application/json
 ```
