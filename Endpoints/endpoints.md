@@ -46,7 +46,6 @@ This endpoint allows for user registration by creating a new user in the system.
 
 **Request Body:**
 
-- `username` (string, required): The username for the new user.
 - `password` (string, required): The password for the new user.
 - `email` (string, required): The email address for the new user.
 - Other fields as defined in the `UserRegistrationSerializer`.
@@ -64,7 +63,6 @@ Host: example.com
 Content-Type: application/json
 
 {
-  "username": "newuser",
   "password": "securepassword",
   "email": "user@example.com"
 }
@@ -78,7 +76,6 @@ Content-Type: application/json
 
 {
   "id": 1,
-  "username": "newuser",
   "email": "user@example.com",
   "date_joined": "2023-06-05T12:34:56Z"
 }
@@ -91,7 +88,7 @@ Content-Type: application/json
 
 ### Login
 
-This endpoint allows for user login by authenticating the user and returning a token.
+This endpoint allows for user login by authenticating the user and starting a session.
 
 **HTTP Method:** POST
 
@@ -103,7 +100,7 @@ This endpoint allows for user login by authenticating the user and returning a t
 
 **Request Body:**
 
-- `username` (string, required): The username of the user.
+- `email` (string, required): The email address of the user.
 - `password` (string, required): The password of the user.
 
 **Response:**
@@ -119,8 +116,8 @@ Host: example.com
 Content-Type: application/json
 
 {
-  "username": "existinguser",
-  "password": "correctpassword"
+"email": "user@example.com",
+"password": "correctpassword"
 }
 ```
 
@@ -131,15 +128,15 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "token": "user-auth-token"
+   "message": "Logged in successfully"
 }
 ```
 
 **Note:**
 
-- Ensure that the request body includes both `username` and `password` fields.
+- Ensure that the request body includes both `email` and `password` fields.
 - The endpoint will return a 400 Bad Request status code if any required fields are missing or invalid.
-- Authentication is handled via `TokenAuthentication`, so the response will include an authentication token if the login is successful.
+- Authentication is handled via session management, so the response includes a success message if the login is successful.
 
 ### Log Out
 
