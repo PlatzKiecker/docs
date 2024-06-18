@@ -248,14 +248,11 @@ This endpoint allows for retrieving, updating, or deleting a specific restaurant
 
 **Request Parameters:**
 
-- `id` (integer, required): The ID of the restaurant to retrieve, update, or delete.
-
+- none
+  
 **Request Body:**
 
 - `name` (string, optional): The name of the restaurant.
-- `address` (string, optional): The address of the restaurant.
-- `phone` (string, optional): The contact phone number of the restaurant.
-- Other fields as defined in the `RestaurantSerializer`.
 
 **Response:**
 
@@ -279,11 +276,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "id": 1,
   "name": "Existing Restaurant",
-  "address": "123 Main St",
-  "phone": "555-1234",
-  "created_at": "2023-06-05T12:34:56Z"
 }
 ```
 
@@ -296,8 +289,6 @@ Content-Type: application/json
 
 {
   "name": "Updated Restaurant",
-  "address": "456 Elm St",
-  "phone": "555-5678"
 }
 ```
 
@@ -308,11 +299,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "id": 1,
   "name": "Updated Restaurant",
-  "address": "456 Elm St",
-  "phone": "555-5678",
-  "created_at": "2023-06-05T12:34:56Z"
 }
 ```
 
@@ -333,7 +320,7 @@ HTTP/1.1 204 No Content
 **Note:**
 
 - This endpoint filters restaurants based on the authenticated user.
-- Ensure that the `id` provided in the path corresponds to a restaurant associated with the user.
+- is automatically selected corresponding to a restaurant associated with the user.
 - Authentication is required for this endpoint.
 - The PUT request allows for updating any of the fields defined in the `RestaurantSerializer`.
 - The DELETE request will remove the specified restaurant from the system.
