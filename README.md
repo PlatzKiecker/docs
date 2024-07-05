@@ -1,313 +1,127 @@
-# PlatzKiecker
-
-PlatzKiecker is a project that aims to implement a table management system for restaurants.
+# PlatzKieker: User Documentation
 
 ## Table of Contents
+- [Overview](#overview)
+- [Gastronome Perspective](#gastronome-perspective)
+    - [1. Accessing our website](#1-accessing-our-website)
+- [Dashboard](#dashboard)
+    - [1. Overview](#1-overview)
+    - [2. Edit table bookings](#2-edit-table-bookings)
+    - [3. Create new bookings](#3-create-new-bookings)
+- [Settings](#settings)
+    - [1. Overview](#1-overview-1)
+    - [2. Restaurant Information and Tables & Zones](#2-restaurant-information-and-tables--zones)
+        - [2.1 Restaurant Information](#21-restaurant-information)
+        - [2.2 Tables & Zones](#22-tables--zones)
+    - [3. Booking periods](#3-booking-periods)
+    - [4. Vacations](#4-vacations)
+- [Guest Perspective](#guest-perspective)
+    - [1. Accessing our website](#1-accessing-our-website-1)
+    - [2. Online Reservation Progress](#2-online-reservation-progress)
+        - [2.1 Booking Information](#21-booking-information)
+        - [2.2 Guest Information](#22-guest-information)
+        - [2.3 Confirmation](#23-confirmation)
 
-- [Project Structure](#project-structure)
-- [Installation and Usage](#installation-and-usage)
-- [Modules](#modules)
-  - [User Module](#user-module)
-    - [User Data Model](#user-data-model)
-  - [Restaurant Module](#restaurant-module)
-    - [Restaurant Data Model](#restaurant-data-model)
-    - [Zone Data Model](#zone-data-model)
-    - [Table Data Model](#table-data-model)
-    - [Vacation Data Model](#vacation-data-model)
-    - [BookingPeriod Data Model](#bookingperiod-data-model)
-  - [Booking Module](#booking-module)
-    - [Booking Data Model](#booking-data-model)
-  - [Script/Module Name](#scriptmodule-name)
-    - [Function/Class Name](#functionclass-name)
-- [Classes](#classes)
-  - [UserRegistrationSerializer](#userregistrationserializer)
-    - [create function](#createfunction)
-    - [update function](#updatefunction)
-  - [UserLoginSerializer](#userloginserializer)
-    - [validate function](#validatefunction)
-- [Endpoints](#endpoints)
-  - [User Endpoints](#unser-endpoints)
-    - [Login](#login)
-  - [Restaurant Endpoints](#restaurant-endpoints)
-    - []
-  - [Booking endpoints](#booking-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Project Structure
-
-Each component has its own directory in the root directory. By that we ensure Modularity and independance between used components.
-
-## Installation and Usage
-
-For Setting up the project, please refer to the [project directory](https://github.com/PlatzKiecker/platzkiecker?tab=readme-ov-file#installation)
-
-## Modules
-
-### User Module
-
-Module for managing users who can administer restaurants.
-
-- Usage:
-1. Import this module: `from user.models import User`.
-2. This module sets up the `User` model for managing users of the application.
-3. This module reads user data for authentication and association with a restaurant.
-
-**Note:**
-
-> Each user can manage only one restaurant.
-> 
-- Example Usage/Config:
-    
-    ```python
-    from user.models import User
-    
-    user = User(email="example@example.com", password="securepassword")
-    user.save()
-    
-    ```
-    
-- **User Data Model**
-
-Represents a user who manages a restaurant.
-
-- **Fields**:
-    - `email`: Email of the user (unique).
-    - `password`: Password for user authentication.
-
----
-
-### Restaurant Module
-
-Module for managing restaurant-related data, including zones, tables, vacations, and booking periods.
-
-- Usage:
-1. Import this module: `from restaurant.models import Restaurant, Zone, Table, Vacation, BookingPeriod`.
-2. This module sets up the `Restaurant`, `Zone`, `Table`, `Vacation`, and `BookingPeriod` models for managing restaurant data.
-3. This module reads restaurant data to manage zones, tables, vacations, and booking periods.
-
-**Note:**
-
-> Each restaurant is managed by a single user.
-> 
-- Example Usage/Config:
-    
-    ```python
-    from restaurant.models import Restaurant, Zone, Table, Vacation, BookingPeriod
-    from user.models import User
-    
-    user = User.objects.create(email="owner@example.com", password="securepassword")
-    restaurant = Restaurant.objects.create(name="Example Restaurant", user=user)
-    zone = Zone.objects.create(name="Main Hall", bookable=True, restaurant=restaurant)
-    table = Table.objects.create(capacity=4, bookable=True, combinable=False, zone=zone)
-    vacation = Vacation.objects.create(start="2024-06-01 00:00:00", end="2024-06-15 23:59:59", restaurant=restaurant)
-    booking_period = BookingPeriod.objects.create(weekday="MO", open="09:00:00", close="18:00:00", default_duration="01:00:00", restaurant=restaurant)
-    
-    ```
-    
-- **Restaurant Data Model**
+## Overview
 
-Represents a restaurant managed by a user.
+Welcome to Platzkieker, your go-to platform for online table reservations and restaurant management. This documentation provides a comprehensive guide to using Platzkieker from two perspectives: the Gastronome (Restaurant Owner) and the Customer. Let's get started!
 
-- **Fields**:
-    - `name`: Name of the restaurant.
-    - `user`: One-to-one relationship with `User`, representing the owner of the restaurant.
-- **Zone Data Model**
+## Gastronome Perspective
 
-Represents a zone within a restaurant.
+### 1. Accessing our website
 
-- **Fields**:
-    - `name`: Name of the zone.
-    - `bookable`: Boolean indicating if the zone can be booked.
-    - `restaurant`: Foreign key relationship to `Restaurant`.
-- **Table Data Model**
+To access the website, type `platzkiecker.de` in your web browser.
 
-Represents a table within a zone of a restaurant.
+You will see our Dashboard with the current table bookings.
 
-- **Fields**:
-    - `capacity`: Number of seats at the table.
-    - `bookable`: Boolean indicating if the table can be booked.
-    - `combinable`: Boolean indicating if the table can be combined with others.
-    - `zone`: Foreign key relationship to `Zone`.
-- **Vacation Data Model**
+## Dashboard
 
-Represents
+### 1. Overview
 
-a vacation period during which the restaurant is closed.
+![UNtitled](images/Untitled.png)
 
-- **Fields**:
-    - `start`: Start date and time of the vacation.
-    - `end`: End date and time of the vacation.
-    - `restaurant`: Foreign key relationship to `Restaurant`.
-- **BookingPeriod Data Model**
+Our dashboard gives the user an overview of the reservations, including the start of the stay, the approximate duration, and the number of reserved tables and guests. Bookings can be filtered by date (today, tomorrow, exact date). The reservation is made under the name of the person who made the reservation; this person can also leave a note as a note for the restaurateur. The current status of the booking is displayed in the ‘Status column’ (canceled, confirmed, pending).
 
-Represents the booking periods available for a restaurant.
+### 2. Edit table bookings
 
-- **Fields**:
-    - `weekday`: Enum representing the day of the week.
-    - `open`: Opening time for bookings.
-    - `close`: Closing time for bookings.
-    - `default_duration`: Default duration for bookings.
-    - `restaurant`: Foreign key relationship to `Restaurant`.
+If the case arises that a reservation needs to be corrected, existing reservations can be edited using the **Edit** button. This action opens the ‘Edit booking’ mask:
 
----
+![Untitled](images/Untitled%201.png)
 
-### Booking Module
+All data (name, guests, calendar, notes) of the booking can be changed in the mask and confirmed using the ‘Update booking’ button.
 
-Module for managing bookings for restaurants.
+### 3. Create new bookings
 
-- Usage:
-1. Import this module: `from booking.models import Booking`.
-2. This module sets up the `Booking` model for managing reservations.
-3. This module reads booking data to manage reservations for restaurants.
+With the ‘new booking’ button in the dashboard, a new mask opens named ‘Create booking’ with that, bookings can be entered manually by the restaurateur:
 
-**Note:**
+![Untitled](images/Untitled%202.png)
 
-> Each booking is associated with a specific restaurant and table.
-> 
-- Example Usage/Config:
-    
-    ```python
-    from booking.models import Booking
-    from restaurant.models import Restaurant, Table
-    
-    restaurant = Restaurant.objects.get(name="Example Restaurant")
-    table = Table.objects.get(zone__restaurant=restaurant, capacity=4)
-    booking = Booking.objects.create(guest_name="John Doe", guest_phone="1234567890", start="2024-06-03 12:00:00", guest_count=2, table=table, restaurant=restaurant)
-    
-    ```
-    
-- **Booking Data Model**
+If a guest books a table by phone or just enters the restaurant and wants a table, the restaurateur can book the table himself. The structure is the same as for the customer view (Name, Guests, Calendar, Notes). The booking is confirmed using the 'Create booking' button.
 
-Represents a booking made by a guest at a restaurant.
+## Settings
 
-- **Fields**:
-    - `guest_name`: Name of the guest.
-    - `guest_phone`: Phone number of the guest.
-    - `start`: Start date and time of the booking.
-    - `guest_count`: Number of guests.
-    - `status`: Status of the booking (e.g., pending, confirmed, seated, cancelled, completed).
-    - `notes`: Additional notes for the booking.
-    - `table`: Foreign key relationship to `Table`.
-    - `restaurant`: Foreign key relationship to `Restaurant`.
+### 1. Overview
 
-### Module Name
+In the Settings area, the options can be configured depending on the wishes of the restaurant owner:
 
-Description of what the module does.
+![Untitled](images/Untitled%203.png)
 
-#### Function/Class Name
+### 2. Restaurant Information and Tables & Zones
 
-Description of what the function/class does.
+#### 2.1 Restaurant Information
 
-- Parameters/Attributes: Description of the parameters/attributes.
-- Returns: Description of the return value (if applicable).
+The name of the restaurant can be entered in this area. You can also set a default value for the booking duration in hours by entering a number or by using the up/down buttons.
 
-## Classes
+#### 2.2 Tables & Zones
 
-### UserRegistrationSerializer
+In this area you can create tables by entering names for them. The number of chairs is determined and a table ID is generated.
 
-A serializer for handling user registration, including validation and creation of new user instances.
+![Untitled](images/Untitled%204.png)
 
-**Attributes:**
-> - `Meta` (class): Inner class defining the model and fields to be serialized.
->   - `model` (Model): The user model to be serialized.
->   - `fields` (tuple): The fields to include in the serialization (`'id'`, `'email'`, `'password'`).
->   - `extra_kwargs` (dict): Additional keyword arguments for fields. The password field is write-only and requires a minimum length of 5 characters.
+Zones can also be created (for example inside- or outside area).
 
-#### create function
+### 3. Booking periods
 
-Creates a new user instance with the validated data.
+In this area, the opening times of the restaurant can be set by pressing the ‘+’ button for entering the times corresponding to the days of the week. Several time intervals can be entered per day to determine when the restaurant has its break time on that day.
 
-**Args:**
-> - `validated_data` (dict): The validated data from the serializer.
+![Untitled](images/Untitled%205.png)
 
-**Returns:**
-> `User`: The created user instance.
+### 4. Vacations
 
-**Note:**
-> This function uses the `create_user` method of the user model to ensure the password is hashed.
+Restaurant holiday times can be set in this tab. As soon as you click on the field, a calendar appears where you can set the time interval. Multiple vacation periods can be entered using the '+'.
 
-**Example:**
-```python
-from mymodule import UserRegistrationSerializer
+![Untitled](images/Untitled%206.png)
 
-serializer = UserRegistrationSerializer(data={'email': 'user@example.com', 'password': 'password123'})
-if serializer.is_valid():
-    user = serializer.save()
-```
+## Guest Perspective
 
-#### update function
+### 1. Accessing our website
 
-Updates an existing user instance with the validated data.
+To access the website, type `localhost:3000/tablereservation` in your web browser.
+> stimmt nicht
 
-**Args:**
-> - `instance` (User): The user instance to update.
-> - `validated_data` (dict): The validated data from the serializer.
+You will see our Online Reservation Portal.
 
-**Returns:**
-> `User`: The updated user instance.
+### 2. Online Reservation Progress
 
-**Note:**
-> If a new password is provided, it will be hashed and saved. Other fields will be updated as specified in the validated data.
+The Online Reservation Progress is divided into 3 steps:
+- Step 1: Booking Information
+- Step 2: Guest Information
+- Step 3: Confirmation.
 
-**Example:**
-```python
-from mymodule import UserRegistrationSerializer
+#### 2.1 Booking Information
 
-user = get_user_model().objects.get(id=1)
-serializer = UserRegistrationSerializer(user, data={'email': 'newemail@example.com', 'password': 'newpassword123'}, partial=True)
-if serializer.is_valid():
-    user = serializer.save()
-```
+The first step is to ask how many guests there are. The date and exact time are also required. You confirm the step with the ‘Submit Table Information’ Button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly.
 
----
+>Bild fehlt
 
-### UserLoginSerializer
+#### 2.2 Guest Information
 
-A serializer for handling user login, including validation of credentials.
+In the second step, the full name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. All fields must be filled in before confirming.
 
-**Attributes:**
-> - `email` (EmailField): The email field for the user login.
-> - `password` (CharField): The password field for the user login. Styled as a password input and does not trim whitespace.
+![Untitled](images/Untitled%207.png)
 
-#### validate function
+#### 2.3 Confirmation
 
-Validates the user credentials.
+In the last step, a booking confirmation with the details of the booking is displayed. All data from the previous steps are summarized here (name, telephone number, comment, date, time, number of guests). Please note that if something needs to be changed, you should contact us. The booking made will then be displayed on the restaurant owner's dashboard.
 
-**Args:**
-> - `attrs` (dict): The attributes to validate, typically containing `email` and `password`.
-
-**Returns:**
-> `dict`: The validated attributes, including the authenticated user.
-
-**Note:**
-> This function uses the `authenticate` method to verify the user's credentials. If authentication fails, it raises a `ValidationError`.
-
-**Example:**
-```python
-from mymodule import UserLoginSerializer
-
-serializer = UserLoginSerializer(data={'email': 'user@example.com', 'password': 'password123'})
-if serializer.is_valid():
-    user = serializer.validated_data['user']
-```
-
-## Endpoints
-
-PLaceholder Text
-
-### User Endpoints
-
-Placeholder Text
-
-#### Login
-
-Insert here
-
-## Contributing
-
-If you plan on contributing to this project, feel free to contact us.
-
-## License
-
-This repository is licensed under the [MIT License](LICENSE).
+![Untitled](images/Untitled%208.png)
