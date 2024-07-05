@@ -3,24 +3,23 @@
 ## Table of Contents
 - [Overview](#overview)
 - [Gastronome Perspective](#gastronome-perspective)
-    - [1. Accessing our website](#1-accessing-our-website)
-- [Dashboard](#dashboard)
-    - [1. Overview](#1-overview)
-    - [2. Edit table bookings](#2-edit-table-bookings)
-    - [3. Create new bookings](#3-create-new-bookings)
-- [Settings](#settings)
-    - [1. Overview](#1-overview-1)
-    - [2. Restaurant Information and Tables & Zones](#2-restaurant-information-and-tables--zones)
-        - [2.1 Restaurant Information](#21-restaurant-information)
-        - [2.2 Tables & Zones](#22-tables--zones)
-    - [3. Booking periods](#3-booking-periods)
-    - [4. Vacations](#4-vacations)
+    - [Accessing the Website](#accessing-the-website)
+    - [Login/Register](#loginregister)
+    - [Dashboard](#dashboard)
+        - [Overview](#overview)
+        - [Editing Table Bookings](#editing-table-bookings)
+        - [Creating New Bookings](#creating-new-bookings)
+    - [Settings](#settings)
+        - [Overview](#overview-1)
+        - [Restaurant Information and Tables & Zones](#restaurant-information-and-tables--zones)
+        - [Booking Periods](#booking-periods)
+        - [Vacations](#vacations)
 - [Guest Perspective](#guest-perspective)
-    - [1. Accessing our website](#1-accessing-our-website-1)
-    - [2. Online Reservation Progress](#2-online-reservation-progress)
-        - [2.1 Booking Information](#21-booking-information)
-        - [2.2 Guest Information](#22-guest-information)
-        - [2.3 Confirmation](#23-confirmation)
+    - [Accessing the Website](#accessing-the-website-1)
+    - [Online Reservation Process](#online-reservation-process)
+        - [Booking Information](#booking-information)
+        - [Guest Information](#guest-information)
+        - [Confirmation](#confirmation)
 
 ## Overview
 
@@ -28,100 +27,101 @@ Welcome to Platzkieker, your go-to platform for online table reservations and re
 
 ## Gastronome Perspective
 
-### 1. Accessing our website
+### Accessing the Website
 
 To access the website, type `platzkiecker.de` in your web browser.
 
-You will see our Dashboard with the current table bookings.
+### Login/Register
 
-## Dashboard
+To access our website, users must [register](https://platzkiecker.de/register). An email and password are required.
 
-### 1. Overview
+![Register Page](images/register.png)
 
-![UNtitled](images/Untitled.png)
+If the user has already registered, they can log in on our [login page](https://platzkiecker.de/login) using their email and password.
 
-Our dashboard gives the user an overview of the reservations, including the start of the stay, the approximate duration, and the number of reserved tables and guests. Bookings can be filtered by date (today, tomorrow, exact date). The reservation is made under the name of the person who made the reservation; this person can also leave a note as a note for the restaurateur. The current status of the booking is displayed in the ‘Status column’ (canceled, confirmed, pending).
+![Login Page](images/login.png)
 
-### 2. Edit table bookings
+### Dashboard
 
-If the case arises that a reservation needs to be corrected, existing reservations can be edited using the **Edit** button. This action opens the ‘Edit booking’ mask:
+Once you are logged in, you will see our Dashboard displaying the current table bookings.
 
-![Untitled](images/Untitled%201.png)
+#### Overview
 
-All data (name, guests, calendar, notes) of the booking can be changed in the mask and confirmed using the ‘Update booking’ button.
+The dashboard provides an overview of the reservations, including the start time, approximate duration, and the number of reserved tables and guests. Bookings can be filtered by date (today, tomorrow, exact date). The reservation is listed under the name of the person who made it; this person can also leave a note for the restaurateur. The current status of the booking is displayed in the ‘Status column’ (canceled, confirmed, pending).
 
-### 3. Create new bookings
+![Dashboard](images/dashboard.png)
 
-With the ‘new booking’ button in the dashboard, a new mask opens named ‘Create booking’ with that, bookings can be entered manually by the restaurateur:
+#### Editing Table Bookings
 
-![Untitled](images/Untitled%202.png)
+If a reservation needs to be corrected, existing reservations can be edited using the **Edit** button. This action opens the ‘Edit booking’ mask, where all data (name, guests, calendar, notes) of the booking can be changed and confirmed using the ‘Update booking’ button.
 
-If a guest books a table by phone or just enters the restaurant and wants a table, the restaurateur can book the table himself. The structure is the same as for the customer view (Name, Guests, Calendar, Notes). The booking is confirmed using the 'Create booking' button.
+![Edit Booking](images/edit_booking.png)
 
-## Settings
+#### Creating New Bookings
 
-### 1. Overview
+With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restaurateur. If a guest books a table by phone or walks into the restaurant wanting a table, the restaurateur can book the table themselves. The structure is the same as for the customer view (Name, Guests, Calendar, Notes). The booking is confirmed using the 'Create booking' button.
 
-In the Settings area, the options can be configured depending on the wishes of the restaurant owner:
+![Create Booking](images/create_booking.png)
 
-![Untitled](images/Untitled%203.png)
+### Settings
 
-### 2. Restaurant Information and Tables & Zones
+#### Overview
 
-#### 2.1 Restaurant Information
+In the Settings area, options can be configured according to the wishes of the restaurant owner.
 
-The name of the restaurant can be entered in this area. You can also set a default value for the booking duration in hours by entering a number or by using the up/down buttons.
+![Settings](images/settings.png)
 
-#### 2.2 Tables & Zones
+#### Restaurant Information and Tables & Zones
 
-In this area you can create tables by entering names for them. The number of chairs is determined and a table ID is generated.
+##### Restaurant Information
 
-![Untitled](images/Untitled%204.png)
+The name of the restaurant can be entered in this area. You can also set a default value for the booking duration in hours by entering a number or using the up/down buttons.
 
-Zones can also be created (for example inside- or outside area).
+##### Tables & Zones
 
-### 3. Booking periods
+In this area, tables can be created by entering names for them. The number of chairs is determined, and a table ID is generated. Zones can also be created (e.g., inside or outside area).
+
+![Tables](images/tables.png)
+
+#### Booking Periods
 
 In this area, the opening times of the restaurant can be set by pressing the ‘+’ button for entering the times corresponding to the days of the week. Several time intervals can be entered per day to determine when the restaurant has its break time on that day.
 
-![Untitled](images/Untitled%205.png)
+![Booking Periods](images/booking_periods.png)
 
-### 4. Vacations
+#### Vacations
 
 Restaurant holiday times can be set in this tab. As soon as you click on the field, a calendar appears where you can set the time interval. Multiple vacation periods can be entered using the '+'.
 
-![Untitled](images/Untitled%206.png)
+![Vacations](images/vacations.png)
 
 ## Guest Perspective
 
-### 1. Accessing our website
+### Accessing the Website
 
-To access the website, type `localhost:3000/tablereservation` in your web browser.
-> stimmt nicht
+To access the website, type `platzkiecker.de/tablereservation` in your web browser.
 
 You will see our Online Reservation Portal.
 
-### 2. Online Reservation Progress
+### Online Reservation Process
 
-The Online Reservation Progress is divided into 3 steps:
-- Step 1: Booking Information
-- Step 2: Guest Information
-- Step 3: Confirmation.
+The Online Reservation Process is divided into three steps:
+1. Booking Information
+2. Guest Information
+3. Confirmation
 
-#### 2.1 Booking Information
+#### Booking Information
 
-The first step is to ask how many guests there are. The date and exact time are also required. You confirm the step with the ‘Submit Table Information’ Button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly.
+The first step asks for the number of guests, date, and exact time. Confirm this step with the ‘Submit Table Information’ button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly.
 
->Bild fehlt
-
-#### 2.2 Guest Information
+#### Guest Information
 
 In the second step, the full name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. All fields must be filled in before confirming.
 
-![Untitled](images/Untitled%207.png)
+![Reservation Details](images/reservation.png)
 
-#### 2.3 Confirmation
+#### Confirmation
 
-In the last step, a booking confirmation with the details of the booking is displayed. All data from the previous steps are summarized here (name, telephone number, comment, date, time, number of guests). Please note that if something needs to be changed, you should contact us. The booking made will then be displayed on the restaurant owner's dashboard.
+In the final step, a booking confirmation with the details of the booking is displayed. All data from the previous steps are summarized here (name, telephone number, comment, date, time, number of guests). Please note that if something needs to be changed, you should contact us. The booking will then be displayed on the restaurant owner's dashboard.
 
-![Untitled](images/Untitled%208.png)
+![Booking Confirmation](images/reservation_2.png)
