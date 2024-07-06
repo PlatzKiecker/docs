@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [Gastronome Perspective](#gastronome-perspective)
+- [Restauranteur Perspective](#restauranteur-perspective)
     - [Accessing the Website](#accessing-the-website)
     - [Login/Register](#loginregister)
     - [Dashboard](#dashboard)
@@ -28,7 +28,7 @@
 
 Welcome to Platzkieker, your go-to platform for online table reservations and restaurant management. This documentation provides a comprehensive guide to using Platzkieker from both the restauranteur's and the customer's perspective. Let's get started!
 
-## Gastronome Perspective
+## Restauranteur Perspective
 
 ### Accessing the Website
 
