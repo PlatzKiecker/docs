@@ -26,7 +26,7 @@
 
 ## Overview
 
-Welcome to Platzkieker, your go-to platform for online table reservations and restaurant management. This documentation provides a comprehensive guide to using Platzkieker from two perspectives: the Gastronome (Restaurant Owner) and the Customer. Let's get started!
+Welcome to Platzkieker, your go-to platform for online table reservations and restaurant management. This documentation provides a comprehensive guide to using Platzkieker from both the restauranteur's and the customer's perspective. Let's get started!
 
 ## Gastronome Perspective
 
@@ -50,7 +50,7 @@ Once you are logged in, you will see our Dashboard displaying the current table 
 
 #### Overview
 
-The dashboard provides an overview of the reservations, including the start time, approximate duration, and the number of reserved tables and guests. Bookings can be filtered by date (today, tomorrow, exact date). The reservation is listed under the name of the person who made it; this person can also leave a note for the restaurateur. The current status of the booking is displayed in the ‘Status column’ (canceled, confirmed, pending).
+The dashboard provides an overview of the reservations, including the start time, approximate duration, and the number of reserved tables and guests. Bookings can be filtered by date (today, tomorrow, exact date). The reservation is listed under the name of the person who made it; this person can also leave a note for the restauranteur. The current status of the booking is displayed in the ‘Status’ column (canceled, confirmed, pending).
 
 ![Dashboard](images/dashboard.png)
 
@@ -62,7 +62,7 @@ If a reservation needs to be corrected, existing reservations can be edited usin
 
 #### Creating New Bookings
 
-With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restaurateur. If a guest books a table by phone or walks into the restaurant wanting a table, the restaurateur can book the table themselves. The structure is the same as for the customer view (Name, Guests, Calendar, Notes). The booking is confirmed using the 'Create booking' button.
+With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. If a guest books a table by phone or comes into the restaurant asking for a table, the restaurateur can book the table themselves. The structure is the same as for the customer view (Name, Guests, Calendar, Notes). The booking is confirmed using the 'Create booking' button.
 
 ![Create Booking](images/create_booking.png)
 
@@ -103,7 +103,7 @@ In this area, the opening times of the restaurant can be set by pressing the ‘
 
 #### Vacations
 
-Restaurant holiday times can be set in this tab. As soon as you click on the field, a calendar appears where you can set the time interval. Multiple vacation periods can be entered using the '+'.
+Restaurant holidays can be set in this tab. As soon as you click on the field, a calendar appears where you can set the time interval. Multiple vacation periods can be entered using the '+'.
 
 ![Vacations](images/vacations.png)
 
@@ -128,7 +128,8 @@ The first step asks for the number of guests, date, and exact time. Confirm this
 
 #### Guest Information
 
-In the second step, the full name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. All fields must be filled in before confirming.
+In the second step, the full name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. All fields must be filled out before confirming.
+Does 'comment' need to be filled out?
 
 ![Reservation Details](images/reservation.png)
 
