@@ -11,7 +11,7 @@
         - [Creating New Bookings](#creating-new-bookings)
     - [Settings](#settings)
         - [Overview](#overview-1)
-        - [Restaurant Information and Tables & Zones](#restaurant-information-and-tables--zones)
+        - [Restaurant Information and Zones & Tables](#restaurant-information-and-zones--tables)
             - [Restaurant Information](#restaurant-information)
             - [Zones](#zones)
             - [Tables](#tables)
