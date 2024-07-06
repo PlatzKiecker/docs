@@ -79,7 +79,7 @@ In the Settings area, options can be configured according to the wishes of the r
 ##### Restaurant Information
 
 The name of the restaurant can be entered in this area. You can also set a default value for the booking duration in hours by entering a number or using the up/down buttons. <br>
-Note: name is a required field.
+Note: name and default booking duration are required fields.
 
 ##### Zones
 
