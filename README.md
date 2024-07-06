@@ -58,7 +58,7 @@ The dashboard provides an overview of the reservations, including the start time
 
 If a reservation needs to be corrected, existing reservations can be edited using the **Edit** button. This action opens the ‘Edit booking’ mask, where all data (name, guests, calendar, notes) of the booking can be changed and confirmed using the ‘Update booking’ button.
 
-![Edit Booking](images/edit_booking.png)
+![Edit Booking](images/edit_booking.jpg)
 
 #### Creating New Bookings
 
