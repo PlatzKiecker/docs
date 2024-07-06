@@ -81,6 +81,8 @@ In the Settings area, options can be configured according to the wishes of the r
 The name of the restaurant can be entered in this area. You can also set a default value for the booking duration in hours by entering a number or using the up/down buttons. <br>
 Note: name and default booking duration are required fields.
 
+![Restaurant Information](images/restaurant_information.png)
+
 ##### Zones
 
 A restaurant can create various zones to organize its seating areas. A zone is defined by a name (e.g., "Inside," "Outside," "Upstairs," "Downstairs") and includes an attribute called "bookable." This attribute indicates whether the tables in that zone can be reserved. <br>
