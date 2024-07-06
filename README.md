@@ -12,6 +12,9 @@
     - [Settings](#settings)
         - [Overview](#overview-1)
         - [Restaurant Information and Tables & Zones](#restaurant-information-and-tables--zones)
+            -[Restaurant Information](#restaurant-information)
+            -[Zones](#zones)
+            -[Tables](#tables)
         - [Booking Periods](#booking-periods)
         - [Vacations](#vacations)
 - [Guest Perspective](#guest-perspective)
@@ -71,15 +74,24 @@ In the Settings area, options can be configured according to the wishes of the r
 
 ![Settings](images/settings.png)
 
-#### Restaurant Information and Tables & Zones
+#### Restaurant Information and Zones & Tables
 
 ##### Restaurant Information
 
 The name of the restaurant can be entered in this area. You can also set a default value for the booking duration in hours by entering a number or using the up/down buttons.
+Note: name is a required field.
 
-##### Tables & Zones
+##### Zones
 
-In this area, tables can be created by entering names for them. The number of chairs is determined, and a table ID is generated. Zones can also be created (e.g., inside or outside area).
+A restaurant can create various zones to organize its seating areas. A zone is defined by a name (e.g., "Inside," "Outside," "Upstairs," "Downstairs") and includes a boolean attribute called "bookable." This attribute indicates whether the tables in that zone can be reserved.
+Note: name is a required field.
+
+![Zones] screenshot hinzufügen
+
+##### Tables
+
+A restaurant can create an individual table within a restaurant using the table module, including its name, the capacity, if it is bookable, and the associated zone. A table ID will be automatically generated when creating a new table. 
+Note: capacity and zone are required fields.
 
 ![Tables](images/tables.png)
 
