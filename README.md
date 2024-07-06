@@ -129,15 +129,16 @@ The Online Reservation Process is divided into three steps:
 
 The first step asks for the number of guests, date, and exact time. Confirm this step with the ‘Submit Table Information’ button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly.
 
+![Table Information](images/table_information.jpg)
+
 #### Guest Information
 
-In the second step, the full name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. All fields must be filled out before confirming.
-Does 'comment' need to be filled out?
+In the second step, the full name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. 'Full name' and 'phone number' fields must be filled out, the 'comment' field is optional.
 
-![Reservation Details](images/reservation.png)
+![Reservation Details](images/guest_information.jpg)
 
 #### Confirmation
 
 In the final step, a booking confirmation with the details of the booking is displayed. All data from the previous steps are summarized here (name, telephone number, comment, date, time, number of guests). Please note that if something needs to be changed, you should contact the restaurant directly. The booking will then be displayed on the restaurant owner's dashboard.
 
-![Booking Confirmation](images/reservation_2.png)
+![Booking Confirmation](images/confirmation.jpg)
