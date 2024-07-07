@@ -64,7 +64,7 @@ If a reservation needs to be corrected, existing reservations can be edited usin
 
 With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. If a guest books a table by phone or comes into the restaurant asking for a table, the restaurateur can book the table themselves. The structure is the same as for the customer view (Name, Guests, Calendar, Notes). The booking is confirmed using the 'Create booking' button.
 
-![Create Booking](images/create_booking.png)
+![Create Booking](images/create_booking.jpg)
 
 ### Settings
 
@@ -129,16 +129,16 @@ The Online Reservation Process is divided into three steps:
 
 The first step asks for the number of guests, date, and exact time. Confirm this step with the ‘Submit Table Information’ button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly.
 
-![Table Information](images/table_information.jpg)
+![Table Information](images/guest_step1.jpg)
 
 #### Guest Information
 
 In the second step, the full name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. 'Full name' and 'phone number' fields must be filled out, the 'comment' field is optional.
 
-![Reservation Details](images/guest_information.jpg)
+![Reservation Details](images/guest_step2.jpg)
 
 #### Confirmation
 
 In the final step, a booking confirmation with the details of the booking is displayed. All data from the previous steps are summarized here (name, telephone number, comment, date, time, number of guests). Please note that if something needs to be changed, you should contact the restaurant directly. The booking will then be displayed on the restaurant owner's dashboard.
 
-![Booking Confirmation](images/confirmation.jpg)
+![Booking Confirmation](images/guest_step3.jpg)
