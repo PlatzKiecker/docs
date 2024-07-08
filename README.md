@@ -135,7 +135,7 @@ The first step asks for the number of guests, the date of the reservation, and s
 
 #### Guest Information
 
-In the second step, the last name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. 'Full name' and 'phone number' fields must be filled out, the 'comment' field is optional.
+In the second step, the last name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment' area. 'Last name' and 'Phone number' fields must be filled out, the 'Comment' field is optional.
 
 ![Reservation Details](images/guest_step2.jpg)
 
