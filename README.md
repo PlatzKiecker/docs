@@ -26,7 +26,7 @@
 
 ## Overview
 
-Welcome to Platzkieker, your go-to platform for online table reservations and restaurant management. This documentation provides a comprehensive guide to using Platzkieker from both the restauranteur's and the customer's perspective. Let's get started!
+Welcome to Platzkieker, your go-to platform for online table reservations and restaurant management. This documentation provides a comprehensive guide to using Platzkieker from both the restauranteur's and the customer's perspective. 
 
 ## Restauranteur Perspective
 
@@ -36,7 +36,7 @@ To access the website, type `platzkiecker.de` in your web browser.
 
 ### Login/Register
 
-To access our website, users must [register](https://platzkiecker.de/register). An email and password are required.
+To access our website, users must [register](https://platzkiecker.de/register). An email and password of at least 5 characters are required.
 
 ![Register Page](images/register.jpg)
 
@@ -50,19 +50,19 @@ Once you are logged in, you will see our Dashboard displaying the current table 
 
 #### Overview
 
-The dashboard provides an overview of the reservations, including the start time, approximate duration, and the number of reserved tables and guests. Bookings can be filtered by date (today, tomorrow, exact date). The reservation is listed under the name of the person who made it; this person can also leave a note for the restauranteur. The current status of the booking is displayed in the ‘Status’ column (canceled, confirmed, pending).
+The dashboard provides an overview of the reservations, including the start and end time, the id of the reserved table, the number of guests and any additional Notes that were made to the reservation. Bookings can be filtered by date (today, tomorrow, exact date). The reservation is listed under the name of the person who made it; this person can also leave a note for the restauranteur. The current status of the booking is displayed in the ‘Status’ column (canceled, confirmed, pending).
 
 ![Dashboard](images/dashboard.png)
 
 #### Editing Table Bookings
 
-If a reservation needs to be corrected, existing reservations can be edited using the **Edit** button. This action opens the ‘Edit booking’ mask, where all data (name, guests, calendar, notes) of the booking can be changed and confirmed using the ‘Update booking’ button.
+If a reservation needs to be corrected, existing reservations can be edited using the **Edit** button. This action opens the ‘Edit booking’ mask, where the name, phone number, notes and the status of the booking can be changed and confirmed using the ‘Update booking’ button. It is also possible to delete the booking here using the "delete booking" button.
 
 ![Edit Booking](images/edit_booking.jpg)
 
 #### Creating New Bookings
 
-With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. If a guest books a table by phone or comes into the restaurant asking for a table, the restaurateur can book the table themselves. The structure is the same as for the customer view (Name, Guests, Calendar, Notes). The booking is confirmed using the 'Create booking' button.
+With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. If a guest books a table via phone or comes into the restaurant asking for a table, the restaurateur can book the table themselves. The required data for a booking is the number of guests, the date and timeslot of the reservation, the last name of the Guest who is making the booking, and their phone number. It is also possible to add notes here. The Booking is then created by clicking the "create booking"-button.
 
 ![Create Booking](images/create_booking.jpg)
 
@@ -70,7 +70,7 @@ With the ‘new booking’ button in the dashboard, a new mask named ‘Create b
 
 #### Overview
 
-In the Settings area, options can be configured according to the wishes of the restaurant owner.
+In the settings area the restauranteur can manually manage the settings of the restaurant according to their wishes. This includes the name of the restaurant, the defaulkt booking duration, the diffrent zones in which there can be tables and the tables.
 
 ![Settings](images/settings.png)
 
@@ -99,7 +99,7 @@ Note: capacity and zone are required fields.
 
 #### Booking Periods
 
-In this area, the opening times of the restaurant can be set by pressing the ‘+’ button for entering the times corresponding to the days of the week. If needed, several time intervals can be entered per day to determine when the restaurant has its break time on that day. Thus, rest days can also easily be created by not determining any bookable periods on the specific day.
+In this area, the opening times of the restaurant can be set by pressing the ‘+’ button for entering the times corresponding to the days of the week. If needed, several time intervals can be entered per day to determine when the restaurant has its break time on that day. Thus, rest days can also easily be created by not determining any bookable periods on days the restaurant is closed.
 
 
 ![Booking Periods](images/booking_periods.png)
@@ -127,18 +127,18 @@ The Online Reservation Process is divided into three steps:
 
 #### Booking Information
 
-The first step asks for the number of guests, date, and exact time. Confirm this step with the ‘Submit Table Information’ button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly.
+The first step asks for the number of guests, the date of the reservation, and shows the available timeslots for the desired day. Confirm this step with the ‘Next Step’ button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly.
 
 ![Table Information](images/guest_step1.jpg)
 
 #### Guest Information
 
-In the second step, the full name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. 'Full name' and 'phone number' fields must be filled out, the 'comment' field is optional.
+In the second step, the last name of the person making the booking is requested. A telephone number is also required for queries and confirmations. Specific details can be referenced in the 'Comment/Reservation Details' area. 'Full name' and 'phone number' fields must be filled out, the 'comment' field is optional.
 
 ![Reservation Details](images/guest_step2.jpg)
 
 #### Confirmation
 
-In the final step, a booking confirmation with the details of the booking is displayed. All data from the previous steps are summarized here (name, telephone number, comment, date, time, number of guests). Please note that if something needs to be changed, you should contact the restaurant directly. The booking will then be displayed on the restaurant owner's dashboard.
+In the final step, a booking confirmation with the details of the booking is displayed. All data from the previous steps are summarized here (name, telephone number, comment, date, time, number of guests). The booking will then be displayed on the restaurant's dashboard. Please note that if something needs to be changed, you have to contact the restaurant directly. 
 
 ![Booking Confirmation](images/guest_step3.jpg)
