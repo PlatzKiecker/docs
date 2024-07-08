@@ -107,7 +107,8 @@ Note: booking periods are to be considered shorter by the lentgh of the previous
 
 #### Vacations
 
-Restaurant holidays can be set in this tab. As soon as you click on the field, a calendar appears where you can set the time interval. Multiple vacation periods can be entered using the '+'.
+Restaurant holidays can be set in this tab. As soon as you click on the field, a calendar appears where you can set the time interval. Multiple vacation periods can be entered using the '+'. <br>
+Note: if not booked at least one month in advance, all costumers who already booked a table in the affected time have to be notified manually.
 
 ![Vacations](images/vacations.png)
 
