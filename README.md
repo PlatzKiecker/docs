@@ -99,7 +99,7 @@ Note: 'Capacity' and 'Zone' are required fields.
 
 #### Booking Periods
 
-In this area, the opening times of the restaurant can be set by pressing the ‘+’ button for entering the times corresponding to the days of the week. If needed, several time intervals can be entered per day to determine when the restaurant has its break time on that day. Thus, rest days can also easily be created by not determining any bookable periods on days the restaurant is closed.
+In this area, the opening times of the restaurant can be set by pressing the ‘+’ button for entering the times corresponding to the days of the week. If needed, several time intervals can be entered per day to determine when the restaurant has its break time on that day. Thus, rest days can also easily be created by not determining any bookable periods on days the restaurant is closed. <br>
 Note: booking periods are to be considered shorter by the lentgh of the previously set default booking duration.
 
 
