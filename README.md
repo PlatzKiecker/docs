@@ -141,6 +141,6 @@ In the second step, the last name of the person making the booking is requested.
 
 #### Confirmation
 
-In the final step, a booking confirmation with the details of the booking is displayed. All data from the previous steps are summarized here (name, telephone number, comment, date, time, number of guests). The booking will then be displayed on the restaurant's dashboard. Please note that if something needs to be changed, you have to contact the restaurant directly. 
+In the final step, a booking confirmation with the details of the booking is displayed. All data from the previous steps are summarized here (name, telephone number, comment, date, time, number of guests). The booking will then be displayed on the restaurant's dashboard. <br> Note: if something needs to be changed, the customer is instructed to contact the restaurant directly. 
 
 ![Booking Confirmation](images/guest_step3.jpg)
