@@ -56,7 +56,7 @@ The dashboard provides an overview of the reservations listed by the name of the
 
 #### Creating New Bookings
 
-With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. In case a guest books a table via phone or comes into the restaurant asking for a table, the restauranteur can book the table themselves.<br> The required data for a booking is the number of guests, the date and timeslot of the reservation, the last name of the Guest who is making the booking, and their phone number. In order to let the available timeslots be displayed, the number of guests always has to be filled out first. If there are no timeslots available for the chosen number of guest and/or the chosen day, this will be mentioned. It is also possible to add notes here. The booking is then created by clicking the 'create booking' button.
+With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. In case a guest books a table via phone or comes into the restaurant asking for a table, the restauranteur can book the table themselves.<br> The required data for a booking is the number of guests, the date and timeslot of the reservation, the last name of the Guest who is making the booking, and their phone number. In order to let the available timeslots be displayed, the number of guests always has to be filled out first. If there are no timeslots available for the chosen number of guests and/or the chosen day, this will be mentioned. It is also possible to add notes here. The booking is then created by clicking the 'create booking' button.
 
 ![Create Booking](images/create_booking.jpg)
 
@@ -129,7 +129,7 @@ The Online Reservation Process is divided into three steps:
 
 #### Booking Information
 
-The first step asks for the number of guests, the date of the reservation, and shows the available timeslots for the desired day. Confirm this step with the ‘Next Step’ button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly. You can book up to one month in advance.
+The first step asks for the number of guests, the date of the reservation, and shows the available timeslots for the desired day. Confirm this step with the ‘Next Step’ button. If the number of guests is higher than 10, the customer is instructed to contact the restauranteur, as he can create bookings for 10 or more guests as well.. You can book up to one month in advance. <br> Note: in order to let the available timeslots be displayed, the number of guests always has to be filled out first. If there are no timeslots available for the chosen number of guests and/or the chosen day, this will be mentioned.
 
 ![Table Information](images/guest_step1.jpg)
 
