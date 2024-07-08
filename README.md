@@ -56,13 +56,13 @@ The dashboard provides an overview of the reservations listed by the name of the
 
 #### Creating New Bookings
 
-With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. In case a guest books a table via phone or comes into the restaurant asking for a table, the restauranteur can book the table themselves.<br> The required data for a booking is the number of guests, the date and timeslot of the reservation, the last name of the Guest who is making the booking, and their phone number. In order to let the available timeslots be displayed, the number of guests always has to be filled out first. If there are no timeslots available for the chosen number of guest and/or the chosen day, this will be mentioned. It is also possible to add notes here. The booking is then created by clicking the "create booking" button.
+With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. In case a guest books a table via phone or comes into the restaurant asking for a table, the restauranteur can book the table themselves.<br> The required data for a booking is the number of guests, the date and timeslot of the reservation, the last name of the Guest who is making the booking, and their phone number. In order to let the available timeslots be displayed, the number of guests always has to be filled out first. If there are no timeslots available for the chosen number of guest and/or the chosen day, this will be mentioned. It is also possible to add notes here. The booking is then created by clicking the 'create booking' button.
 
 ![Create Booking](images/create_booking.jpg)
 
 #### Editing Table Bookings
 
-If a reservation needs to be corrected, existing reservations can be edited using the **Edit** button on the dashboard. This action opens the ‘Edit booking’ mask, where the name, phone number, notes and the status of the booking can be changed. The changes need to confirmed using the ‘Update booking’ button. It is also possible to delete the booking here using the "delete booking" button.
+If a reservation needs to be corrected, existing reservations can be edited using the **Edit** button on the dashboard. This action opens the ‘Edit booking’ mask, where the name, phone number, notes and the status of the booking can be changed. The changes need to confirmed using the ‘Update booking’ button. It is also possible to delete the booking here using the 'delete booking' button.
 
 ![Edit Booking](images/edit_booking.jpg)
 
@@ -79,13 +79,13 @@ In the settings area the restauranteur can manually manage the settings of the r
 ##### Restaurant Information
 
 The name of the restaurant can be entered in this area. You can also set a default value for the booking duration in hours by entering a number or using the up/down buttons. <br>
-Note: name and default booking duration are required fields.
+Note: 'Name' and 'Default booking duration' are required fields.
 
 ![Restaurant Information](images/restaurant_information.png)
 
 ##### Zones
 
-A restaurant can create various zones to organize its seating areas. A zone is defined by a name (e.g., "Inside," "Outside," "Upstairs," "Downstairs") and includes an attribute called "bookable." This attribute indicates whether the tables in that zone can be reserved. <br>
+A restaurant can create various zones to organize its seating areas. A zone is defined by a name (e.g., 'Inside', 'Outside', 'Upstairs', 'Downstairs') and includes an attribute called 'bookable'. This attribute indicates whether the tables in that zone can be reserved. <br>
 Note: name is a required field.
 
 ![Zones] screenshot hinzufügen
