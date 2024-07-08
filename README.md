@@ -50,7 +50,7 @@ Once you are logged in, you will see our Dashboard displaying the current table 
 
 #### Overview
 
-The dashboard provides an overview of the reservations, including the start and end time, the id of the reserved table, the number of guests and any additional Notes that were made to the reservation. Bookings can be filtered by date (today, tomorrow, exact date). The reservation is listed under the name of the person who made it; this person can also leave a note for the restauranteur. The current status of the booking is displayed in the ‘Status’ column (canceled, confirmed, pending).
+The dashboard provides an overview of the reservations, including the start and end time, the ID of the reserved table, the number of guests and any additional notes that were made to the reservation, as well as the name of the person who made the reservation. Bookings can be filtered by date (today, tomorrow, exact date). The reservation is listed under the name of the person who made it. The current status of the booking is displayed in the ‘Status’ column (canceled, confirmed, pending).
 
 ![Dashboard](images/dashboard.png)
 
