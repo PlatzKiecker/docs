@@ -56,7 +56,7 @@ The dashboard provides an overview of the reservations listed by the name of the
 
 #### Editing Table Bookings
 
-If a reservation needs to be corrected, existing reservations can be edited using the **Edit** button. This action opens the ‘Edit booking’ mask, where the name, phone number, notes and the status of the booking can be changed and confirmed using the ‘Update booking’ button. It is also possible to delete the booking here using the "delete booking" button.
+If a reservation needs to be corrected, existing reservations can be edited using the **Edit** button on the dashboard. This action opens the ‘Edit booking’ mask, where the name, phone number, notes and the status of the booking can be changed. The changes need to confirmed using the ‘Update booking’ button. It is also possible to delete the booking here using the "delete booking" button.
 
 ![Edit Booking](images/edit_booking.jpg)
 
