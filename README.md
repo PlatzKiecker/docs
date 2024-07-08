@@ -7,8 +7,8 @@
     - [Login/Register](#loginregister)
     - [Dashboard](#dashboard)
         - [Overview](#overview)
-        - [Editing Table Bookings](#editing-table-bookings)
         - [Creating New Bookings](#creating-new-bookings)
+        - [Editing Table Bookings](#editing-table-bookings)
     - [Settings](#settings)
         - [Overview](#overview-1)
         - [Restaurant Information and Zones & Tables](#restaurant-information-and-zones--tables)
@@ -54,17 +54,17 @@ The dashboard provides an overview of the reservations listed by the name of the
 
 ![Dashboard](images/dashboard.png)
 
+#### Creating New Bookings
+
+With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. In case a guest books a table via phone or comes into the restaurant asking for a table, the restaurateur can book the table themselves. The required data for a booking is the number of guests, the date and timeslot of the reservation, the last name of the Guest who is making the booking, and their phone number. It is also possible to add notes here. The Booking is then created by clicking the "create booking"-button.
+
+![Create Booking](images/create_booking.jpg)
+
 #### Editing Table Bookings
 
 If a reservation needs to be corrected, existing reservations can be edited using the **Edit** button on the dashboard. This action opens the ‘Edit booking’ mask, where the name, phone number, notes and the status of the booking can be changed. The changes need to confirmed using the ‘Update booking’ button. It is also possible to delete the booking here using the "delete booking" button.
 
 ![Edit Booking](images/edit_booking.jpg)
-
-#### Creating New Bookings
-
-With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. If a guest books a table via phone or comes into the restaurant asking for a table, the restaurateur can book the table themselves. The required data for a booking is the number of guests, the date and timeslot of the reservation, the last name of the Guest who is making the booking, and their phone number. It is also possible to add notes here. The Booking is then created by clicking the "create booking"-button.
-
-![Create Booking](images/create_booking.jpg)
 
 ### Settings
 
