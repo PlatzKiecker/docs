@@ -129,7 +129,7 @@ The Online Reservation Process is divided into three steps:
 
 #### Booking Information
 
-The first step asks for the number of guests, the date of the reservation, and shows the available timeslots for the desired day. Confirm this step with the ‘Next Step’ button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly.
+The first step asks for the number of guests, the date of the reservation, and shows the available timeslots for the desired day. Confirm this step with the ‘Next Step’ button. If the number of guests is higher than 10, please make the booking by calling the restaurant directly. You can book up to one month in advance.
 
 ![Table Information](images/guest_step1.jpg)
 
