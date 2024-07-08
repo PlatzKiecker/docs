@@ -79,7 +79,7 @@ In the settings area the restauranteur can manually manage the settings of the r
 ##### Restaurant Information
 
 The name of the restaurant can be entered in this area. You can also set a default value for the booking duration in hours by entering a number or using the up/down buttons. <br>
-Note: name and default booking duration are required fields.
+Note: name and default booking duration are required fields. Both fields are filled out automatically after creating an account, but can be changed according to the users wishes. <br> The default booking duration is set to 2 hours after registering.
 
 ![Restaurant Information](images/restaurant_information.png)
 
