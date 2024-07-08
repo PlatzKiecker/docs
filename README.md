@@ -86,14 +86,14 @@ Note: 'Name' and 'Default booking duration' are required fields.
 ##### Zones
 
 A restaurant can create various zones to organize its seating areas. A zone is defined by a name (e.g., 'Inside', 'Outside', 'Upstairs', 'Downstairs') and includes an attribute called 'bookable'. This attribute indicates whether the tables in that zone can be reserved. <br>
-Note: name is a required field.
+Note: 'Name' is a required field. 'Zone 1' is automatically created as the first zone after registration. A zone can only be deleted if there are no tables left in the specific zone.
 
 ![Zones] screenshot hinzufügen
 
 ##### Tables
 
 A restaurant can create an individual table within a restaurant using the table module, including its name, the capacity, (if it is bookable, and the associated zone. muss klären, ob das im frontend sichtbar ist) A table ID will be automatically generated when creating a new table. <br>
-Note: capacity and zone are required fields.
+Note: 'Capacity' and 'Zone' are required fields.
 
 ![Tables](images/tables.png)
 
