@@ -40,7 +40,7 @@ To access our website, users must [register](https://platzkiecker.de/register). 
 
 ![Register Page](images/register.jpg)
 
-If the user has already registered, they can log in on our [login page](https://platzkiecker.de/login) using their email and password.
+If the user has already created an account, they can log in on our [login page](https://platzkiecker.de/login) using their email and password.
 
 ![Login Page](images/login.jpg)
 
