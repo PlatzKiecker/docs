@@ -70,7 +70,7 @@ If a reservation needs to be corrected, existing reservations can be edited usin
 
 #### Overview
 
-In the settings area the restauranteur can manually manage the settings of the restaurant according to their wishes. This includes the name of the restaurant, the default booking duration, the tables and the different zones in which the tables can be organised.
+In the settings area the restauranteur can manually manage the settings of the restaurant according to their wishes. This includes the name of the restaurant, the default booking duration, the tables and the different zones in which the tables can be organised. <br> Note: restaurant name, default booking duration and tables as well as bookable periods are necessary to be able to create bookings.
 
 ![Settings](images/settings.png)
 
