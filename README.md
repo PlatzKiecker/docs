@@ -36,11 +36,11 @@ To access the website please use localhost:3000 in the following in your local e
 
 ### Login/Register
 
-To access our website, users must [register](http://localhost:8000/register). An email and password of at least 5 characters are required.
+To access our website, users must [register](http://localhost:3000/register). An email and password of at least 5 characters are required.
 
 ![Register Page](images/register.jpg)
 
-If the user has already created an account, they can log in on our [login page](http://localhost:8000/login) using their email and password.
+If the user has already created an account, they can log in on our [login page](http://localhost:3000/login) using their email and password.
 
 
 ![Login Page](images/login.jpg)
