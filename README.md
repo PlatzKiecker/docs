@@ -119,8 +119,7 @@ Note: if not booked at least one month in advance, all costumers who already boo
 
 ### Accessing the Website
 
-To access the website, type `platzkiecker.de/tablereservation` in your web browser.
-
+To access the reservation website, copy the link in settings into your browser.
 You will see our Online Reservation Portal.
 
 ### Online Reservation Process
