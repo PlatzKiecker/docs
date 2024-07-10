@@ -74,8 +74,6 @@ If a reservation needs to be corrected, existing reservations can be edited usin
 In the settings area the restauranteur can manually manage the settings of the restaurant according to their wishes. This includes the name of the restaurant, the default booking duration, the tables and the different zones in which the tables can be organised. <br> Note: restaurant name, default booking duration and tables as well as bookable periods are required to be able to create bookings.
 
 ![Settings](images/settings.png)
-<img width="1367" alt="image" src="https://github.com/PlatzKiecker/docs/assets/50880937/ce746f15-0a3d-44b2-888c-141ef1f9d865">
-
 
 #### Restaurant Information and Zones & Tables
 
@@ -91,15 +89,12 @@ Note: 'Name' and 'Default booking duration' are required fields.
 A restaurant can create various zones to organize its seating areas. A zone is defined by a name (e.g., 'Inside', 'Outside', 'Upstairs', 'Downstairs') and includes an attribute called 'bookable'. This attribute indicates whether the tables in that zone can be reserved. <br>
 Note: 'Name' is a required field. 'Zone 1' is automatically created as the first zone after registration. When a zone get's deletes all tables within that zone get deleted.
 
-<img width="506" alt="image" src="https://github.com/PlatzKiecker/docs/assets/50880937/070bfd44-9636-4cf3-9634-31335d046a21">
-
+![Restaurant Information](images/table_screenshot.png)
 
 ##### Tables
 
 A restaurant can create an individual table within a restaurant using the table module, including its name, the capacity, A table ID will be automatically generated when creating a new table. <br>
-Note: 'Capacity' and 'Zone' are required fields.
-
-<img width="535" alt="image" src="https://github.com/PlatzKiecker/docs/assets/50880937/960f984c-1b82-4aa5-b3e0-d802ce91cc9f">
+Note: The zone will automaticall assigned depending on which zone you add the field to.
 
 
 #### Booking Periods
