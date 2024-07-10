@@ -32,17 +32,15 @@ Welcome to Platzkieker, your go-to platform for online table reservations and re
 
 ### Accessing the Website
 
-To access the website, type `platzkiecker.de` in your web browser. If you run it locally replace platzkiecker.de by localhost:3000 in the following.
+To access the website please use localhost:3000 in the following in your local enviroment.
 
 ### Login/Register
 
-To access our website, users must [register](https://platzkiecker.de/register). An email and password of at least 5 characters are required.
-If you use the local development enviroment please visit [register](http://localhost:8000/register). 
+To access our website, users must [register](http://localhost:8000/register). An email and password of at least 5 characters are required.
 
 ![Register Page](images/register.jpg)
 
-If the user has already created an account, they can log in on our [login page](https://platzkiecker.de/login) using their email and password.
-If you use the local development enviroment please visit [login page](http://localhost:8000/login). 
+If the user has already created an account, they can log in on our [login page](http://localhost:8000/login) using their email and password.
 
 
 ![Login Page](images/login.jpg)
