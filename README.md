@@ -37,10 +37,13 @@ To access the website, type `platzkiecker.de` in your web browser. If you run it
 ### Login/Register
 
 To access our website, users must [register](https://platzkiecker.de/register). An email and password of at least 5 characters are required.
+If you use the local development enviroment please visit [register](http://localhost:8000/register). 
 
 ![Register Page](images/register.jpg)
 
 If the user has already created an account, they can log in on our [login page](https://platzkiecker.de/login) using their email and password.
+If you use the local development enviroment please visit [login page](http://localhost:8000/login). 
+
 
 ![Login Page](images/login.jpg)
 
