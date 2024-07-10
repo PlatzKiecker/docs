@@ -56,6 +56,7 @@ The dashboard provides an overview of the reservations listed by the name of the
 
 #### Creating New Bookings
 
+Before creating any new bookings you have to set up tables and zones and opening times in the settings section. Please look into the settings sectino for further guidance.
 With the ‘new booking’ button in the dashboard, a new mask named ‘Create booking’ opens, allowing bookings to be entered manually by the restauranteur. In case a guest books a table via phone or comes into the restaurant asking for a table, the restauranteur can book the table themselves.<br> The required data for a booking is the number of guests, the date and timeslot of the reservation, the last name of the Guest who is making the booking, and their phone number. In order to let the available timeslots be displayed, the number of guests always has to be filled out first. If there are no timeslots available for the chosen number of guests and/or the chosen day, this will be mentioned. It is also possible to add notes here. The booking is then created by clicking the 'create booking' button.
 
 ![Create Booking](images/create_booking.jpg)
@@ -73,6 +74,8 @@ If a reservation needs to be corrected, existing reservations can be edited usin
 In the settings area the restauranteur can manually manage the settings of the restaurant according to their wishes. This includes the name of the restaurant, the default booking duration, the tables and the different zones in which the tables can be organised. <br> Note: restaurant name, default booking duration and tables as well as bookable periods are required to be able to create bookings.
 
 ![Settings](images/settings.png)
+<img width="1367" alt="image" src="https://github.com/PlatzKiecker/docs/assets/50880937/ce746f15-0a3d-44b2-888c-141ef1f9d865">
+
 
 #### Restaurant Information and Zones & Tables
 
@@ -86,16 +89,18 @@ Note: 'Name' and 'Default booking duration' are required fields.
 ##### Zones
 
 A restaurant can create various zones to organize its seating areas. A zone is defined by a name (e.g., 'Inside', 'Outside', 'Upstairs', 'Downstairs') and includes an attribute called 'bookable'. This attribute indicates whether the tables in that zone can be reserved. <br>
-Note: 'Name' is a required field. 'Zone 1' is automatically created as the first zone after registration. A zone can only be deleted if there are no tables left in the specific zone.
+Note: 'Name' is a required field. 'Zone 1' is automatically created as the first zone after registration. When a zone get's deletes all tables within that zone get deleted.
 
-![Zones] screenshot hinzufügen
+<img width="506" alt="image" src="https://github.com/PlatzKiecker/docs/assets/50880937/070bfd44-9636-4cf3-9634-31335d046a21">
+
 
 ##### Tables
 
-A restaurant can create an individual table within a restaurant using the table module, including its name, the capacity, (if it is bookable, and the associated zone. muss klären, ob das im frontend sichtbar ist) A table ID will be automatically generated when creating a new table. <br>
+A restaurant can create an individual table within a restaurant using the table module, including its name, the capacity, A table ID will be automatically generated when creating a new table. <br>
 Note: 'Capacity' and 'Zone' are required fields.
 
-![Tables](images/tables.png)
+<img width="535" alt="image" src="https://github.com/PlatzKiecker/docs/assets/50880937/960f984c-1b82-4aa5-b3e0-d802ce91cc9f">
+
 
 #### Booking Periods
 
